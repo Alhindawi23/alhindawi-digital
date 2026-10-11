@@ -112,6 +112,11 @@
 
   .om .wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3rem; align-items: center; }
   .om p { margin-top: 1rem; color: var(--muted); max-width: 32rem; }
+  .grundare-etikett { display: inline-block; padding: .35rem .9rem; border: 1px solid var(--coral); border-radius: 999px; color: var(--coral); font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 1rem; }
+  .om .titlar { margin-top: .6rem; font-size: 1.05rem; }
+  .om .btn-linje { color: var(--ink); }
+  .taggar { margin: 1.4rem 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: .5rem; }
+  .taggar li { padding: .4rem .9rem; border: 1px solid var(--line); border-radius: 999px; background: var(--paper); color: var(--coral); font-size: .9rem; font-weight: 600; }
   .ruta { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 2rem; }
   .ruta ul { margin: 1rem 0 0; padding: 0; list-style: none; display: grid; gap: .7rem; }
   .ruta li { display: flex; gap: .7rem; }
@@ -490,9 +495,14 @@
   <section class="block om" aria-labelledby="om-rubrik">
     <div class="wrap">
       <div>
-        <h2 id="om-rubrik">Hej, jag heter Tem</h2>
-        <p>Jag driver Alhindawi Digital från Köping och bygger hemsidor åt lokala företag.</p>
-        <p>Jag bygger sidorna med hjälp av moderna AI-verktyg, och lägger min tid på det som gör skillnad: att sidan berättar om just ditt företag och fungerar för dina kunder.</p>
+        <h2 id="om-rubrik">Tem Alhindawi</h2>
+        <p class="titlar">Webbdesigner &middot; Copywriter &middot; Entreprenör</p>
+        <p>Startade Alhindawi Digital med ett mål: att ge lokala småföretag en hemsida som faktiskt fungerar. Inga krångliga offerter eller dyra byråpriser, utan ett färdigt förslag att titta på innan du bestämmer dig.</p>
+        <p>Jag hjälper frisörer, caféer, butiker och restauranger med hemsida, texter, Google-profil och innehåll till sociala medier, på svenska och engelska.</p>
+        <ul class="taggar" aria-label="Kompetenser">
+          <li>Hemsidor</li><li>Copywriting</li><li>Google-profil</li><li>Sociala medier</li><li>Översättning</li>
+        </ul>
+        <a class="btn btn-linje" href="#tjanster" style="margin-top:1.5rem">Se tjänster &rarr;</a>
       </div>
       <div class="ruta">
         <h3 style="font-size:1.5rem">Det här får du</h3>
@@ -536,7 +546,7 @@
   (function () {
     var TILL = 'alhindawi.digital@gmail.com';
     function bygg(form) {
-      var id = form.id, rader = [], hej = id === 'form-boka' ? 'Hej Tem! Jag vill boka ett kort samtal.' : 'Hej Tem! Jag vill se ett förslag på en hemsida.';
+      var id = form.id, rader = [], hej = id === 'form-boka' ? 'Hej! Jag vill boka ett kort samtal.' : 'Hej! Jag vill se ett förslag på en hemsida.';
       rader.push(hej, '');
       var d = new FormData(form), grupper = {};
       d.forEach(function (v, k) { if (!String(v).trim()) return; (grupper[k] = grupper[k] || []).push(String(v).trim()); });
