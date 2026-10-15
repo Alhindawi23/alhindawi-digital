@@ -5,7 +5,7 @@
 <meta name="format-detection" content="telephone=yes, email=yes">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Alhindawi Digital – hemsidor för lokala företag</title>
-<meta name="description" content="Alhindawi Digital drivs av Tem Alhindawi i Köping och bygger hemsidor åt lokala småföretag. Du får ett kostnadsfritt förslag först, och bestämmer sedan.">
+<meta name="description" content="Alhindawi Digital är en webbyrå baserad i Köping som skapar enkla, snygga och mobilanpassade hemsidor för lokala småföretag som frisörer, caféer och butiker, och som drivs av Tem Alhindawi.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -221,6 +221,13 @@
   .fler-not { margin-top: 1.4rem; color: var(--muted); font-size: .95rem; }
   @media (max-width: 700px) { .fler-rutnat { grid-template-columns: 1fr; } }
 
+  .sprakrad { border-bottom: 1px solid var(--line); background: var(--bg); }
+  .sprakrad .wrap { display: flex; justify-content: flex-end; padding: .45rem 0; }
+  .sprakval { display: inline-flex; border: 1.5px solid var(--line); border-radius: 999px; overflow: hidden; background: var(--paper); }
+  .sprakval button { font: inherit; font-size: .85rem; font-weight: 600; padding: .3rem .95rem; border: 0; background: transparent; color: var(--muted); cursor: pointer; }
+  .sprakval button[aria-pressed="true"] { background: var(--navy); color: #FFFFFF; }
+  .sprakval button:focus-visible { outline: 3px solid var(--coral); outline-offset: -3px; }
+
   footer { padding: 2rem 0 2.5rem; color: var(--muted); font-size: .95rem; }
   footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .8rem 2rem; }
 
@@ -233,6 +240,12 @@
     .tjanst-lista, .projekt .rad3 { grid-template-columns: 1fr; }
   }
   @media (max-width: 480px) { .steg { grid-template-columns: 1fr; } .knappar .btn { flex: 1 1 100%; } }
+  header .btn, .logga span { white-space: nowrap; }
+  @media (max-width: 480px) {
+    header .btn { padding: .5rem .85rem; font-size: .92rem; }
+    .logga { font-size: 1rem; gap: .45rem; }
+    .logga svg { width: 1.8rem; height: 1.8rem; }
+  }
 </style>
 <script type="application/ld+json">
 {
@@ -240,7 +253,7 @@
   "@type": "ProfessionalService",
   "name": "Alhindawi Digital",
   "url": "https://alhindawidigital.se",
-  "description": "Alhindawi Digital bygger enkla, snygga och mobilanpassade hemsidor åt lokala småföretag, med ett kostnadsfritt förslag först.",
+  "description": "Alhindawi Digital är en webbyrå baserad i Köping som skapar enkla, snygga och mobilanpassade hemsidor för lokala småföretag som frisörer, caféer och butiker, och som drivs av Tem Alhindawi.",
   "email": "alhindawi.digital@gmail.com",
   "founder": {
     "@type": "Person",
@@ -262,6 +275,14 @@
 </script>
 </head>
 <body>
+<div class="sprakrad">
+  <div class="wrap">
+    <div class="sprakval" role="group" aria-label="Språk / Language">
+      <button type="button" data-lang="sv" aria-pressed="true" lang="sv">Svenska</button>
+      <button type="button" data-lang="en" aria-pressed="false" lang="en">English</button>
+    </div>
+  </div>
+</div>
 <header>
   <div class="wrap">
     <a class="logga" href="#" aria-label="Alhindawi Digital, till toppen">
@@ -498,9 +519,10 @@
   <section class="block om" aria-labelledby="om-rubrik">
     <div class="wrap">
       <div>
+        <span class="grundare-etikett">Grundaren</span>
         <h2 id="om-rubrik">Tem Alhindawi</h2>
         <p class="titlar">Webbdesigner &middot; Copywriter &middot; Entreprenör</p>
-        <p>Alhindawi Digital drivs av Tem Alhindawi i Köping och startades med ett mål: att ge lokala småföretag en hemsida som faktiskt fungerar. Inga krångliga offerter eller dyra byråpriser, utan ett färdigt förslag att titta på innan du bestämmer dig.</p>
+        <p>Alhindawi Digital är en webbyrå baserad i Köping som skapar enkla, snygga och mobilanpassade hemsidor för lokala småföretag som frisörer, caféer och butiker, och som drivs av Tem Alhindawi. Den startades med ett mål: att ge lokala småföretag en hemsida som faktiskt fungerar. Inga krångliga offerter eller dyra byråpriser, utan ett färdigt förslag att titta på innan du bestämmer dig.</p>
         <p>Jag hjälper frisörer, caféer, butiker och restauranger med hemsida, texter, Google-profil och innehåll till sociala medier, på svenska och engelska.</p>
         <ul class="taggar" aria-label="Kompetenser">
           <li>Hemsidor</li><li>Copywriting</li><li>Google-profil</li><li>Sociala medier</li><li>Översättning</li>
@@ -572,7 +594,7 @@
         e.preventDefault();
         var namn = form.querySelector('[name="Mitt namn"]'), kontakt = form.querySelector('[name="Kontakt"]');
         if (!namn.value.trim() || !kontakt.value.trim() || (id === 'form-bygg' && !form.querySelector('[name="Företag"]').value.trim())) {
-          fel.textContent = 'Fyll i de obligatoriska fälten (namn, ' + (id === 'form-bygg' ? 'företag och ' : '') + 'hur jag når dig).';
+          fel.textContent = document.documentElement.lang === 'en' ? 'Please fill in the required fields (name, ' + (id === 'form-bygg' ? 'business and ' : '') + 'how to reach you).' : 'Fyll i de obligatoriska fälten (namn, ' + (id === 'form-bygg' ? 'företag och ' : '') + 'hur jag når dig).';
           fel.hidden = false; return;
         }
         fel.hidden = true;
@@ -587,7 +609,7 @@
       });
       res.querySelector('.kopiera-text').addEventListener('click', function () {
         var knapp = this, ta = res.querySelector('.resultat-text'), orig = knapp.textContent;
-        function klar(t) { knapp.textContent = t; setTimeout(function () { knapp.textContent = orig; }, 2200); }
+        function klar(t) { if (document.documentElement.lang === 'en') { t = t === 'Kopierad!' ? 'Copied!' : 'Selected, copy it'; } knapp.textContent = t; setTimeout(function () { knapp.textContent = orig; }, 2200); }
         try {
           if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(ta.value).then(function () { klar('Kopierad!'); }, function () { ta.select(); klar('Markerad, kopiera'); }); }
           else { ta.select(); klar('Markerad, kopiera'); }
@@ -596,6 +618,68 @@
     }
     koppla('form-bygg');
   })();
+</script>
+<script>
+(function () {
+  var DATA = {"EN": {"Så funkar det": "How it works", "Tjänster": "Services", "Fler tjänster": "More services", "Projekt": "Projects", "Priser": "Pricing", "Boka samtal": "Book a call", "Få ett förslag": "Get a proposal", "Hemsidor för": "Websites for", "lokala företag.": "local businesses.", "Jag bygger enkla, snygga och mobilanpassade hemsidor åt frisörer, caféer, butiker och andra småföretag. Du får se ett färdigt förslag innan du bestämmer dig.": "I build simple, good-looking, mobile-friendly websites for hairdressers, cafés, shops and other small businesses. You see a finished proposal before you decide.", "Få ett kostnadsfritt förslag": "Get a free proposal", "Baserad i Köping, och jobbar med företag i hela Sverige.": "Based in Köping, working with businesses all over Sweden.", "Frisörsalong": "Hair salon", "SMASHBURGARE": "SMASH BURGERS", "Du behöver inte förstå dig på teknik. Jag sköter allt, och du ser resultatet innan du betalar något.": "You don't need to understand technology. I handle everything, and you see the result before you pay anything.", "Jag kollar in ditt företag": "I look into your business", "Vad ni erbjuder, era omdömen och vad som gör er speciella.": "What you offer, your reviews and what makes you special.", "Du får ett förslag": "You get a proposal", "En färdig hemsida att titta på, helt utan förpliktelser.": "A finished website to look at, with no obligations.", "Du bestämmer": "You decide", "Gillar du den finjusterar vi text, bilder och färger tillsammans.": "If you like it, we fine-tune the text, images and colours together.", "Den går live": "It goes live", "Jag kopplar din egen adress och ser till att allt fungerar.": "I connect your own address and make sure everything works.", "Vad jag hjälper till med": "What I help with", "Allt som behövs för att ditt företag ska synas på nätet, utan krångel.": "Everything your business needs to be visible online, without the hassle.", "Ny hemsida": "New website", "En sida som visar vad ni gör, när ni har öppet och hur man hittar er, anpassad för mobilen.": "A site that shows what you do, when you are open and how to find you, made for mobile.", "Omdesign": "Redesign", "Har ni redan en sida som känns gammal eller inte fungerar i mobilen? Jag gör en ny version.": "Already have a site that feels dated or doesn't work on mobile? I'll make a new version.", "Egen adress": "Your own address", "Jag hjälper till med domän och publicering, så att sidan ligger på er egen adress.": "I help with the domain and publishing, so the site sits on your own address.", "Skötsel": "Maintenance", "Nya öppettider, ny meny eller nya bilder? Jag gör ändringarna åt er.": "New opening hours, a new menu or new photos? I'll make the changes for you.", "Fler sätt jag kan hjälpa till": "More ways I can help", "Du behöver inte en hel hemsida för att komma igång. Här är mindre uppdrag som går att beställa var för sig.": "You don't need a whole website to get started. Here are smaller jobs you can order separately.", "Texter och mejl": "Copy and emails", "från 295 kr": "from 295 SEK", "Kundmejl, nyhetsbrev och svar på omdömen, skrivna på svenska eller engelska.": "Customer emails, newsletters and replies to reviews, written in Swedish or English.", "Inlägg för sociala medier": "Social media posts", "375 kr för 5 inlägg": "375 SEK for 5 posts", "Fem färdiga inlägg med text och förslag på bild, för Instagram och Facebook.": "Five finished posts with text and image suggestions, for Instagram and Facebook.", "Google-profil": "Google profile", "från 495 kr": "from 495 SEK", "Rätta öppettider, kategorier och beskrivning, och få ordning på bilder och kontaktuppgifter. Du ger mig tillgång till profilen.": "Correct opening hours, categories and description, and get your photos and contact details in order. You give me access to the profile.", "Översättning": "Translation", "från 150 kr": "from 150 SEK", "Meny eller text mellan svenska och engelska.": "Menus or text between Swedish and English.", "QR-kod": "QR code", "från 75 kr": "from 75 SEK", "En QR-kod som leder till din meny, din hemsida eller dina omdömen.": "A QR code that leads to your menu, your website or your reviews.", "Korta videor": "Short videos", "pris efter överenskommelse": "price by agreement", "Korta videor till Instagram och TikTok, till exempel en genomgång av er nya sida.": "Short videos for Instagram and TikTok, for example a walkthrough of your new site.", "Alla priser är startpriser. Du får det slutliga priset och vad som ingår skriftligt innan jag börjar, och betalar via Swish.": "All prices are starting prices. You get the final price and what's included in writing before I begin, and you pay via Swish.", "Senaste projekt": "Latest project", "Ett förslag på en ny hemsida för en burgarrestaurang i Köping.": "A proposal for a new website for a burger restaurant in Köping.", "En ny, mobilanpassad hemsida där burgaren delas upp i sina lager när man scrollar. Med beställning via Qopla och Foodora, öppettider som visar dagens dag och en \"Om oss\"-text skriven av restaurangen.": "A new, mobile-friendly website where the burger splits into its layers as you scroll. With ordering via Qopla and Foodora, opening hours that highlight today, and an \"About us\" text written by the restaurant.", "Byggd på restaurangens egen bild och egna ord": "Built on the restaurant's own image and own words", "Beställning direkt från sidan": "Ordering straight from the site", "Anpassad för mobilen": "Made for mobile", "Se förslaget": "See the proposal", "Visas med restaurangens godkännande.": "Shown with the restaurant's approval.", "Priser och betalning": "Pricing and payment", "Du väljer själv om du bara vill ha sidan, eller om du vill att jag sköter den åt dig. Inga överraskningar.": "You choose whether you just want the site, or want me to look after it for you. No surprises.", "Engångsköp": "One-time purchase", "Bara hemsidan": "Just the website", "Från 1 500 kr": "From 1,500 SEK", "Betalas en gång. Ingen månadskostnad.": "Paid once. No monthly cost.", "En färdig hemsida som du äger": "A finished website that you own", "Hjälp att publicera den på din egen adress": "Help publishing it on your own address", "Domänen kostar ungefär 100–150 kr om året och betalas av dig": "The domain costs about 100–150 SEK a year and is paid by you", "Ändringar innan sidan går live ingår": "Changes before the site goes live are included", "Mindre ändringar efteråt kostar 149 kr styck": "Small changes afterwards cost 149 SEK each", "Engångsköp + skötsel": "One-time purchase + maintenance", "Hemsida och skötsel": "Website and maintenance", "Från 1 500 kr + 99 kr/mån": "From 1,500 SEK + 99 SEK/month", "Engångspris för sidan, och sedan en månadsavgift.": "A one-time price for the site, then a monthly fee.", "Allt i engångsköpet": "Everything in the one-time purchase", "Jag sköter domän och publicering åt dig": "I handle the domain and publishing for you", "Upp till 2 mindre ändringar i månaden ingår, till exempel öppettider, priser, text eller en bild": "Up to 2 small changes a month are included, for example opening hours, prices, text or an image", "Ingen bindningstid, en månads uppsägning": "No lock-in period, one month notice", "Du behöver aldrig tänka på det tekniska": "You never have to think about the technical side", "Så går betalningen till": "How payment works", "Förslaget är alltid kostnadsfritt, och du bestämmer om du vill gå vidare.": "The proposal is always free, and you decide whether to go ahead.", "Innan jag börjar får du priset och vad som ingår skriftligt, så att vi är överens.": "Before I start you get the price and what's included in writing, so we agree.", "Du väljer själv om du vill ha skötsel med månadsavgift eller bara köpa sidan en gång.": "You choose whether you want maintenance with a monthly fee or just buy the site once.", "Betalning sker via Swish. Swish-uppgifter skickar jag när vi har kommit överens om pris och vad som ingår, och du får ett kvitto.": "Payment is made via Swish. I send the Swish details once we have agreed on the price and what's included, and you get a receipt.", "Större ändringar, som nya sidor, ny design eller bokningsfunktion, får du pris på separat innan jag börjar.": "For bigger changes, such as new pages, a new design or a booking function, you get a separate price before I start.", "Bygg ditt förslag": "Build your proposal", "Berätta hur du vill att din hemsida ska se ut, så tar jag fram ett kostnadsfritt förslag. Det tar två minuter.": "Tell me how you want your website to look, and I will put together a free proposal. It takes two minutes.", "Ditt namn": "Your name", "Företagets namn": "Business name", "Bransch": "Industry", "Frisör eller salong": "Hairdresser or salon", "Café eller restaurang": "Café or restaurant", "Skönhet, naglar eller massage": "Beauty, nails or massage", "Hantverk eller bygg": "Trades or construction", "Butik": "Shop", "Något annat": "Something else", "Vilken stil gillar du?": "Which style do you like?", "Ren och modern": "Clean and modern", "Mycket luft, enkla färger": "Lots of space, simple colours", "Varm och personlig": "Warm and personal", "Mjuka färger, hemtrevlig känsla": "Soft colours, a homely feel", "Kraftfull och djärv": "Strong and bold", "Stora rubriker, starka kontraster": "Big headlines, strong contrasts", "Färger": "Colours", "Huvudfärg": "Main colour", "Accentfärg": "Accent colour", "Välj färger åt mig": "Choose colours for me", "Vad ska finnas på sidan?": "What should be on the site?", "Öppettider": "Opening hours", "Tjänster eller meny": "Services or menu", "Kontaktuppgifter": "Contact details", "Karta": "Map", "Kundomdömen": "Customer reviews", "Länk till bokning": "Booking link", "Instagram och Facebook": "Instagram and Facebook", "Vill du ha hjälp med något mer? (valfritt)": "Do you want help with anything else? (optional)", "Instagram, Facebook eller annan länk (valfritt)": "Instagram, Facebook or another link (optional)", "Hur når jag dig? (mejl eller telefon)": "How can I reach you? (email or phone)", "Något mer jag bör veta? (valfritt)": "Anything else I should know? (optional)", "Skapa mitt meddelande": "Create my message", "Det här skickar inget av sig självt. Du får ett färdigt mejl som du själv skickar, så att du kan läsa igenom det först.": "This doesn't send anything by itself. You get a ready-made email that you send yourself, so you can read it through first.", "Nästan klart": "Almost done", "Tryck på": "Tap", "Öppna mejl": "Open email", ", så öppnas din mejlapp med allt ifyllt. Fungerar inte det, kopiera texten och skicka den till": ", and your email app opens with everything filled in. If that does not work, copy the text and send it to", "Kopiera texten": "Copy the text", "Boka ett samtal": "Book a call with me", "Vill du hellre prata? Boka ett samtal på 30 minuter direkt i kalendern.": "Would you rather talk? Book a 30-minute call straight in the calendar.", "Boka direkt i kalendern": "Book straight in the calendar", "30 minuter. Välj en tid som passar dig, så får du en bekräftelse.": "30 minutes. Pick a time that suits you and you get a confirmation.", "Välj en tid": "Pick a time", "Grundaren": "The founder", "Webbdesigner · Copywriter · Entreprenör": "Web designer · Copywriter · Entrepreneur", "Alhindawi Digital är en webbyrå baserad i Köping som skapar enkla, snygga och mobilanpassade hemsidor för lokala småföretag som frisörer, caféer och butiker, och som drivs av Tem Alhindawi. Den startades med ett mål: att ge lokala småföretag en hemsida som faktiskt fungerar. Inga krångliga offerter eller dyra byråpriser, utan ett färdigt förslag att titta på innan du bestämmer dig.": "Alhindawi Digital is a web agency based in Köping that creates simple, good-looking, mobile-friendly websites for local small businesses such as hairdressers, cafés and shops, and is run by Tem Alhindawi. It was started with one goal: to give local small businesses a website that actually works. No complicated quotes or expensive agency prices, just a finished proposal to look at before you decide.", "Jag hjälper frisörer, caféer, butiker och restauranger med hemsida, texter, Google-profil och innehåll till sociala medier, på svenska och engelska.": "I help hairdressers, cafés, shops and restaurants with websites, copy, Google profiles and social media content, in Swedish and English.", "Hemsidor": "Websites", "Sociala medier": "Social media", "Se tjänster →": "See services →", "Det här får du": "What you get", "Ett färdigt förslag innan du bestämmer dig": "A finished proposal before you decide", "En sida som fungerar lika bra i mobilen som på datorn": "A site that works as well on mobile as on a computer", "Text på svenska om just ditt företag": "Swedish text about your specific business", "Hjälp med egen adress och publicering": "Help with your own address and publishing", "Vill du se hur din sida kan se ut?": "Want to see what your site could look like?", "Skicka namnet på ditt företag, så tar jag fram ett kostnadsfritt förslag.": "Send me your business name and I'll put together a free proposal.", "Mejla mig": "Email me", "Skriv på WhatsApp": "Message on WhatsApp"}, "ATTR": {"Alhindawi Digital, till toppen": "Alhindawi Digital, back to top", "Huvudmeny": "Main menu", "Förhandsvisning av ZigZag Burgers nya hemsida på mobil, där burgaren är uppdelad i sina lager": "Preview of ZigZag Burger's new website on mobile, where the burger is split into its layers", "Ditt meddelande": "Your message", "Kompetenser": "Skills", "Mejla Alhindawi Digital": "Email Alhindawi Digital"}, "T": "Alhindawi Digital – websites for local businesses", "D": "Alhindawi Digital is a web agency based in Köping that creates simple, good-looking, mobile-friendly websites for local small businesses such as hairdressers, cafés and shops, and is run by Tem Alhindawi."};
+  var EN = DATA.EN, ATTR = DATA.ATTR, REV = {}, ATTR_REV = {};
+  Object.keys(EN).forEach(function (k) { REV[EN[k]] = k; });
+  Object.keys(ATTR).forEach(function (k) { ATTR_REV[ATTR[k]] = k; });
+  REV['Hair salon'] = 'Fris\u00f6r\u00adsalong'; REV['SMASH BURGERS'] = 'SMASH\u00adBURGARE';
+  var SKIP = { SCRIPT: 1, STYLE: 1, TEXTAREA: 1, NOSCRIPT: 1 };
+  var has = Object.prototype.hasOwnProperty;
+  var descEl = document.querySelector('meta[name="description"]');
+  var origTitle = document.title, origDesc = descEl ? descEl.getAttribute('content') : '';
+
+  // Keep form values in Swedish so the email you receive is always in Swedish
+  document.querySelectorAll('option').forEach(function (o) { if (!o.hasAttribute('value')) o.value = o.textContent; });
+
+  function swapText(map) {
+    var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n, list = [];
+    while ((n = w.nextNode())) list.push(n);
+    list.forEach(function (n) {
+      var p = n.parentNode; if (!p || SKIP[p.nodeName]) return;
+      var raw = n.nodeValue, key = raw.replace(/\u00ad/g, '').trim();
+      if (!key || !has.call(map, key)) return;
+      var m = raw.match(/^(\s*)([\s\S]*?)(\s*)$/);
+      n.nodeValue = m[1] + map[key] + m[3];
+    });
+  }
+  function swapAttrs(map) {
+    ['aria-label', 'alt', 'placeholder'].forEach(function (a) {
+      document.querySelectorAll('[' + a + ']').forEach(function (el) {
+        var v = el.getAttribute(a);
+        if (has.call(map, v)) el.setAttribute(a, map[v]);
+      });
+    });
+  }
+  function ui(lang) {
+    document.querySelectorAll('.sprakval button').forEach(function (b) {
+      b.setAttribute('aria-pressed', b.getAttribute('data-lang') === lang ? 'true' : 'false');
+    });
+  }
+  function apply(lang, save) {
+    var cur = document.documentElement.lang === 'en' ? 'en' : 'sv';
+    if (lang !== cur) {
+      if (lang === 'en') {
+        swapText(EN); swapAttrs(ATTR);
+        document.title = DATA.T; if (descEl) descEl.setAttribute('content', DATA.D);
+      } else {
+        swapText(REV); swapAttrs(ATTR_REV);
+        document.title = origTitle; if (descEl) descEl.setAttribute('content', origDesc);
+      }
+      document.documentElement.lang = lang;
+    }
+    ui(lang);
+    if (save) { try { localStorage.setItem('sprak', lang); } catch (e) {} }
+  }
+  document.querySelectorAll('.sprakval button').forEach(function (b) {
+    b.addEventListener('click', function () { apply(b.getAttribute('data-lang'), true); });
+  });
+  var saved = null;
+  try { saved = localStorage.getItem('sprak'); } catch (e) {}
+  if (saved === 'en') apply('en', false);
+})();
 </script>
 </body>
 </html>
