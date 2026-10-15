@@ -472,7 +472,7 @@
         <p>Tryck på <strong>Öppna mejl</strong>, så öppnas din mejlapp med allt ifyllt. Fungerar inte det, kopiera texten och skicka den till <strong>alhindawi.digital@gmail.com</strong>.</p>
         <textarea class="resultat-text" readonly rows="9" aria-label="Ditt meddelande"></textarea>
         <div class="resultat-knappar">
-          <a class="btn btn-coral oppna" href="#" target="_blank" rel="noopener">Öppna mejl</a>
+          <a class="btn btn-coral oppna" href="#">Öppna mejl</a>
           <button class="btn btn-linje kopiera-text" type="button">Kopiera texten</button>
         </div>
       </div>
@@ -483,7 +483,7 @@
     <div class="wrap">
       <div class="rubrik">
         <h2 id="boka-rubrik">Boka ett samtal</h2>
-        <p>Vill du hellre prata? Boka ett samtal på 30 minuter direkt i kalendern, eller föreslå en tid så bekräftar jag.</p>
+        <p>Vill du hellre prata? Boka ett samtal på 30 minuter direkt i kalendern.</p>
       </div>
       <div class="calendly-kort">
         <div>
@@ -491,29 +491,6 @@
           <p>30 minuter. Välj en tid som passar dig, så får du en bekräftelse.</p>
         </div>
         <a class="btn btn-coral" href="https://calendly.com/alhindawi-digital/30min" target="_blank" rel="noopener">Välj en tid</a>
-      </div>
-      <p class="eller-rad">Eller föreslå en tid själv:</p>
-      <form class="formkort" id="form-boka" data-amne="Boka ett samtal" novalidate>
-        <div class="falt"><label for="k-namn">Ditt namn</label><input id="k-namn" name="Mitt namn" type="text" autocomplete="name" required></div>
-        <div class="falt"><label for="k-foretag">Företag</label><input id="k-foretag" name="Företag" type="text"></div>
-        <div class="falt"><label for="k-dag">Vilken dag passar bäst?</label>
-          <select id="k-dag" name="Önskad dag"><option>Måndag</option><option>Tisdag</option><option>Onsdag</option><option>Torsdag</option><option>Fredag</option><option>Lördag</option><option>Söndag</option><option>Spelar ingen roll</option></select></div>
-        <div class="falt"><label for="k-tid">Vilken tid på dagen?</label>
-          <select id="k-tid" name="Önskad tid"><option>Förmiddag</option><option>Eftermiddag</option><option>Kväll</option><option>Spelar ingen roll</option></select></div>
-        <div class="falt"><label for="k-kontakt">Hur når jag dig? (mejl eller telefon)</label><input id="k-kontakt" name="Kontakt" type="text" required></div>
-        <div class="falt"><label for="k-ovrigt">Vad vill du prata om? (valfritt)</label><textarea id="k-ovrigt" name="Övrigt" rows="3"></textarea></div>
-        <button class="btn btn-coral" type="submit">Skapa mitt meddelande</button>
-        <p class="formnot">Du får ett färdigt mejl som du själv skickar. Jag svarar med en bekräftad tid.</p>
-        <p class="fel" role="alert" hidden></p>
-      </form>
-      <div class="resultat" id="res-form-boka" hidden>
-        <h3>Nästan klart</h3>
-        <p>Tryck på <strong>Öppna mejl</strong>, så öppnas din mejlapp med allt ifyllt. Fungerar inte det, kopiera texten och skicka den till <strong>alhindawi.digital@gmail.com</strong>.</p>
-        <textarea class="resultat-text" readonly rows="7" aria-label="Ditt meddelande"></textarea>
-        <div class="resultat-knappar">
-          <a class="btn btn-coral oppna" href="#" target="_blank" rel="noopener">Öppna mejl</a>
-          <button class="btn btn-linje kopiera-text" type="button">Kopiera texten</button>
-        </div>
       </div>
     </div>
   </section>
@@ -601,7 +578,10 @@
         fel.hidden = true;
         var text = bygg(form);
         res.querySelector('.resultat-text').value = text;
-        res.querySelector('.oppna').href = 'mailto:' + TILL + '?subject=' + encodeURIComponent(form.getAttribute('data-amne')) + '&body=' + encodeURIComponent(text);
+        var mailto = 'mailto:' + TILL + '?subject=' + encodeURIComponent(form.getAttribute('data-amne')) + '&body=' + encodeURIComponent(text);
+        var oppna = res.querySelector('.oppna');
+        oppna.href = mailto;
+        oppna.onclick = function (ev) { ev.preventDefault(); window.location.href = mailto; };
         res.hidden = false;
         res.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       });
@@ -614,7 +594,7 @@
         } catch (err) { ta.select(); klar('Markerad, kopiera'); }
       });
     }
-    koppla('form-bygg'); koppla('form-boka');
+    koppla('form-bygg');
   })();
 </script>
 </body>
