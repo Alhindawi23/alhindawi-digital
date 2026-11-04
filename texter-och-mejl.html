@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=yes, email=yes">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Texter och mejl – Alhindawi Digital</title>
+<meta name="description" content="Kundmejl, nyhetsbrev och svar på omdömen, skrivna på svenska eller engelska. Från 295 kr.">
+<link rel="canonical" href="https://alhindawidigital.se/texter-och-mejl.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="sv_SE">
+<meta property="og:site_name" content="Alhindawi Digital">
+<meta property="og:title" content="Texter och mejl – Alhindawi Digital">
+<meta property="og:description" content="Kundmejl, nyhetsbrev och svar på omdömen, skrivna på svenska eller engelska. Från 295 kr.">
+<meta property="og:url" content="https://alhindawidigital.se/texter-och-mejl.html">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F5F2EC;
+    --paper: #FFFFFF;
+    --navy: #16233F;
+    --coral: #D85A30;
+    --peach: #E9A187;
+    --ink: #121A2E;
+    --muted: #5B6273;
+    --line: #DED8CC;
+    --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+    --sans: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg: #0E1424; --paper: #172038; --ink: #EEF0F5; --muted: #A9AFBF; --line: #273150; }
+  }
+  :root[data-theme="dark"] { --bg: #0E1424; --paper: #172038; --ink: #EEF0F5; --muted: #A9AFBF; --line: #273150; }
+
+  :root { box-sizing: border-box; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 4.5rem); scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 1.08rem; line-height: 1.6; }
+  a { color: inherit; }
+  a:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 800; line-height: 1; letter-spacing: -.02em; margin: 0; }
+  p { margin: 0; }
+  .wrap { width: min(1120px, 100% - 2.5rem); margin-inline: auto; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; font-weight: 600; padding: 1rem 1.6rem; border-radius: 12px; border: 2px solid transparent; }
+  .btn-coral { background: var(--coral); color: #FFFFFF; }
+  .btn-coral:hover { background: #C24E28; }
+  .btn-linje { border-color: currentColor; }
+
+  /* Header with the A mark */
+  header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 4.25rem; }
+  .logga { display: flex; align-items: center; gap: .6rem; text-decoration: none; font-family: var(--display); font-weight: 800; font-size: 1.15rem; }
+  .logga svg { width: 2.1rem; height: 2.1rem; flex: none; }
+  .logga em { font-style: normal; color: var(--coral); }
+  header nav { display: flex; align-items: center; gap: 1.6rem; font-weight: 500; }
+  header nav a.lank { text-decoration: none; }
+  header .btn { padding: .6rem 1.1rem; }
+
+  /* Hero: a fan of mini sites, the one bold element */
+  .hero { padding: 4.5rem 0 4rem; }
+  .hero .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+  .hero h1 { font-size: clamp(2.9rem, 7vw, 5.4rem); }
+  .hero h1 span { color: var(--coral); }
+  .hero .ingress { margin-top: 1.4rem; max-width: 31rem; font-size: 1.18rem; color: var(--muted); }
+  .hero .knappar { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: .8rem; }
+  .hero .notis { margin-top: 1.2rem; color: var(--muted); font-size: .95rem; }
+
+  .solfjader { position: relative; height: 26rem; }
+  .mini { position: absolute; width: 62%; aspect-ratio: 3 / 4; border-radius: 16px; overflow: hidden; box-shadow: 0 24px 50px -24px rgba(18,26,46,.55); border: 1px solid rgba(0,0,0,.06); display: flex; flex-direction: column; }
+  .mini .bar { height: 1.6rem; display: flex; align-items: center; gap: .3rem; padding: 0 .6rem; background: rgba(255,255,255,.75); }
+  .mini .bar i { width: .45rem; height: .45rem; border-radius: 50%; background: rgba(0,0,0,.2); }
+  .mini .kropp { flex: 1; padding: 1.1rem; display: flex; flex-direction: column; gap: .5rem; }
+  .mini .titel { font-family: var(--display); font-weight: 800; font-size: 1.6rem; line-height: .95; }
+  .mini .rad { height: .5rem; border-radius: 4px; background: currentColor; opacity: .25; }
+  .mini .knapp { margin-top: auto; height: 1.8rem; width: 55%; border-radius: 6px; }
+  .m1 { left: 0; top: 2.2rem; transform: rotate(-8deg); background: #1F4A52; color: #F3EEE3; }
+  .m1 .knapp { background: #B2693C; }
+  .m2 { left: 19%; top: .4rem; transform: rotate(-1deg); background: #FAF8F6; color: #1C1A1B; z-index: 2; }
+  .m2 .titel em { font-style: italic; color: #9C6B6E; font-family: Georgia, serif; font-weight: 400; }
+  .m2 .knapp { background: #1C1A1B; }
+  .m3 { right: 0; top: 3rem; transform: rotate(7deg); background: #FFFFFF; color: #0A0A0A; z-index: 1; }
+  .m3 .knapp { background: #0A0A0A; }
+  @media (prefers-reduced-motion: no-preference) {
+    .mini { transition: transform .5s cubic-bezier(.2,.7,.2,1); }
+    .solfjader:hover .m1 { transform: rotate(-12deg) translateX(-6%); }
+    .solfjader:hover .m3 { transform: rotate(11deg) translateX(6%); }
+  }
+
+  section.block { padding: 5rem 0; }
+  h2 { font-size: clamp(2.3rem, 5.5vw, 3.8rem); }
+  .rubrik p { margin-top: 1rem; max-width: 34rem; color: var(--muted); }
+
+  .steg { margin-top: 2.4rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; counter-reset: steg; }
+  .steg li { list-style: none; background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 1.5rem; counter-increment: steg; }
+  .steg li::before { content: counter(steg); display: grid; place-items: center; width: 2.2rem; height: 2.2rem; border-radius: 50%; background: var(--navy); color: #FFFFFF; font-weight: 700; margin-bottom: 1rem; }
+  .steg h3 { font-size: 1.35rem; }
+  .steg p { margin-top: .5rem; color: var(--muted); font-size: 1rem; }
+  ol.steg { padding: 0; margin-bottom: 0; }
+
+  .tjanster { background: var(--navy); color: #EEF0F5; }
+  .tjanster h2 { color: #FFFFFF; }
+  .tjanster .rubrik p { color: #B9C0D4; }
+  .tjanst-lista { margin-top: 2.4rem; display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 3rem; }
+  .tjanst { padding: 1.4rem 0; border-top: 1px solid rgba(255,255,255,.16); }
+  .tjanst h3 { font-size: 1.6rem; color: #FFFFFF; }
+  .tjanst h3 span { color: var(--peach); }
+  .tjanst p { margin-top: .4rem; color: #B9C0D4; }
+
+  .projekt .rad3 { margin-top: 2.4rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .fall { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+  .fall .yta { height: 9rem; display: grid; place-items: center; font-family: var(--display); font-weight: 800; font-size: 1.8rem; }
+  .fall .text { padding: 1.2rem 1.3rem 1.4rem; }
+  .fall .text p { color: var(--muted); font-size: .98rem; margin-top: .3rem; }
+  .fall strong { font-size: 1.05rem; }
+  .not { margin-top: 1.2rem; color: var(--muted); font-size: .92rem; }
+
+  .om .wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3rem; align-items: center; }
+  .om p { margin-top: 1rem; color: var(--muted); max-width: 32rem; }
+  .grundare-etikett { display: inline-block; padding: .35rem .9rem; border: 1px solid var(--coral); border-radius: 999px; color: var(--coral); font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 1rem; }
+  .om .titlar { margin-top: .6rem; font-size: 1.05rem; }
+  .om .btn-linje { color: var(--ink); }
+  .taggar { margin: 1.4rem 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: .5rem; }
+  .taggar li { padding: .4rem .9rem; border: 1px solid var(--line); border-radius: 999px; background: var(--paper); color: var(--coral); font-size: .9rem; font-weight: 600; }
+  .ruta { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 2rem; }
+  .ruta ul { margin: 1rem 0 0; padding: 0; list-style: none; display: grid; gap: .7rem; }
+  .ruta li { display: flex; gap: .7rem; }
+  .ruta li::before { content: ""; flex: none; width: .55rem; height: .55rem; margin-top: .55rem; border-radius: 50%; background: var(--coral); }
+
+  .kontakt { background: var(--coral); color: #FFFFFF; text-align: center; }
+  .kontakt h2 { color: #FFFFFF; }
+  .kontakt p { margin: 1.1rem auto 0; max-width: 32rem; color: #FFE9E0; }
+  .kontakt .knappar { margin-top: 2rem; display: flex; flex-wrap: wrap; justify-content: center; gap: .8rem; }
+  .kontakt .btn-vit { background: #FFFFFF; color: var(--navy); }
+  .kontakt .btn-linje { color: #FFFFFF; }
+
+
+  .priser .paket { margin-top: 2.4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .pkt { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 1.8rem; display: flex; flex-direction: column; gap: .9rem; }
+  .pkt.markerad { border: 2px solid var(--navy); }
+  .pkt .typ { font-weight: 600; color: var(--coral); }
+  .pkt h3 { font-size: 1.9rem; }
+  .pkt .pris { font-family: var(--display); font-weight: 800; font-size: 2.2rem; line-height: 1; }
+  .pkt .pris small { display: block; margin-top: .4rem; font-family: var(--sans); font-weight: 500; font-size: .95rem; color: var(--muted); }
+  .pkt ul { margin: 0; padding: 0; list-style: none; display: grid; gap: .55rem; }
+  .pkt li { display: flex; gap: .7rem; color: var(--muted); }
+  .pkt li::before { content: ""; flex: none; width: .55rem; height: .55rem; margin-top: .55rem; border-radius: 50%; background: var(--coral); }
+  .villkor { margin-top: 2rem; background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 1.8rem; }
+  .villkor h3 { font-size: 1.5rem; }
+  .villkor ol { margin: 1rem 0 0; padding-left: 1.2rem; display: grid; gap: .5rem; color: var(--muted); }
+  @media (max-width: 880px) { .priser .paket { grid-template-columns: 1fr; } }
+
+
+  .caset { margin-top: 2.4rem; display: grid; grid-template-columns: auto 1fr; gap: 3rem; align-items: center; }
+  .telefon { width: min(17rem, 100%); border: 8px solid var(--ink); border-radius: 34px; overflow: hidden; box-shadow: 0 24px 50px -24px rgba(18,26,46,.5); background: #fff; }
+  .telefon img { display: block; width: 100%; height: auto; }
+  .caset-text h3 { font-size: 2rem; }
+  .caset-text p { margin-top: .8rem; color: var(--muted); max-width: 32rem; }
+  .caset-text ul { margin: 1.2rem 0 1.6rem; padding: 0; list-style: none; display: grid; gap: .6rem; }
+  .caset-text li { display: flex; gap: .7rem; color: var(--ink); }
+  .caset-text li::before { content: ""; flex: none; width: .55rem; height: .55rem; margin-top: .55rem; border-radius: 50%; background: var(--coral); }
+  .caset-text .notis-liten { font-size: .9rem; margin-top: 1rem; }
+  @media (max-width: 760px) { .caset { grid-template-columns: 1fr; justify-items: center; } .caset-text { width: 100%; } }
+
+
+
+
+
+
+  .socials { display: flex; justify-content: center; gap: .8rem; margin-top: 1.4rem; }
+  .social { display: grid; place-items: center; width: 3.1rem; height: 3.1rem; border-radius: 50%; border: 2px solid currentColor; color: #FFFFFF; text-decoration: none; transition: background .2s, color .2s, transform .2s; }
+  .social svg { width: 1.45rem; height: 1.45rem; }
+  .social:hover { background: #FFFFFF; color: #16233F; transform: translateY(-2px); }
+  .social:focus-visible { outline: 3px solid #FFFFFF; outline-offset: 3px; }
+  .socials-footer { margin-top: 0; }
+  .socials-footer .social { color: var(--ink); width: 2.6rem; height: 2.6rem; }
+  .socials-footer .social svg { width: 1.2rem; height: 1.2rem; }
+  .socials-footer .social:hover { background: var(--ink); color: var(--bg); }
+
+
+  .formkort { margin-top: 2.2rem; background: var(--paper); border: 1px solid var(--line); border-radius: 22px; padding: 1.8rem; display: grid; gap: 1.2rem; max-width: 44rem; }
+  .falt { display: grid; gap: .45rem; border: 0; padding: 0; margin: 0; min-width: 0; }
+  .falt label, .falt legend { font-weight: 600; color: var(--ink); padding: 0; }
+  .formkort input[type="text"], .formkort input[type="url"], .formkort select, .formkort textarea { width: 100%; font: inherit; color: var(--ink); background: var(--bg); border: 1.5px solid var(--line); border-radius: 12px; padding: .8rem .95rem; }
+  .formkort input:focus-visible, .formkort select:focus-visible, .formkort textarea:focus-visible { outline: 3px solid var(--coral); outline-offset: 2px; }
+  .val { display: grid; gap: .7rem; }
+  .valkort { display: flex; gap: .8rem; align-items: flex-start; padding: .9rem 1rem; border: 1.5px solid var(--line); border-radius: 14px; background: var(--bg); cursor: pointer; font-weight: 400 !important; }
+  .valkort input { margin-top: .35rem; accent-color: var(--coral); }
+  .valkort strong { display: block; color: var(--ink); }
+  .valkort small { color: var(--muted); }
+  .farger { display: flex; flex-wrap: wrap; gap: .8rem 1.4rem; align-items: center; }
+  .farg { display: flex; align-items: center; gap: .6rem; font-weight: 500 !important; }
+  .farg input[type="color"] { width: 3rem; height: 2.4rem; border: 1.5px solid var(--line); border-radius: 10px; padding: 2px; background: var(--bg); }
+  .kryssrad { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem 1rem; }
+  .kryss { display: flex; align-items: center; gap: .6rem; font-weight: 400 !important; }
+  .kryss input { accent-color: var(--coral); width: 1.15rem; height: 1.15rem; }
+  .formnot { color: var(--muted); font-size: .92rem; }
+  .fel { color: #B3261E; font-weight: 600; }
+  .resultat { margin-top: 1.4rem; background: var(--paper); border: 2px solid var(--coral); border-radius: 22px; padding: 1.6rem; max-width: 44rem; display: grid; gap: 1rem; }
+  .resultat h3 { font-size: 1.6rem; }
+  .resultat p { color: var(--muted); }
+  .resultat-text { width: 100%; font: inherit; font-size: .95rem; color: var(--ink); background: var(--bg); border: 1.5px solid var(--line); border-radius: 12px; padding: .8rem .95rem; }
+  .resultat-knappar { display: flex; flex-wrap: wrap; gap: .8rem; }
+  .resultat .btn-linje { color: var(--ink); }
+  @media (max-width: 560px) { .kryssrad { grid-template-columns: 1fr; } .resultat-knappar .btn { flex: 1 1 100%; } }
+
+
+  button.btn { font: inherit; font-weight: 600; cursor: pointer; }
+  button.btn-linje { background: transparent; }
+  button.btn-linje:hover { background: var(--ink); color: var(--bg); }
+
+
+  .calendly-kort { margin-top: 2rem; max-width: 44rem; background: var(--paper); border: 2px solid var(--coral); border-radius: 22px; padding: 1.6rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 1.6rem; }
+  .calendly-kort h3 { font-size: 1.7rem; }
+  .calendly-kort p { margin-top: .4rem; color: var(--muted); max-width: 24rem; }
+  .eller-rad { margin-top: 1.8rem; font-weight: 600; color: var(--muted); }
+  @media (max-width: 560px) { .calendly-kort .btn { width: 100%; } }
+
+
+  .fler-rutnat { margin-top: 2.2rem; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+  .fler-kort { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 1.5rem; }
+  .fler-topp { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: .6rem .8rem; }
+  .fler-kort h3 { font-size: 1.4rem; }
+  .pris-tagg { display: inline-block; padding: .25rem .7rem; border-radius: 999px; background: color-mix(in srgb, var(--coral) 14%, transparent); color: var(--ink); font-size: .85rem; font-weight: 600; white-space: nowrap; }
+  .fler-kort p { margin-top: .6rem; color: var(--muted); }
+  .fler-not { margin-top: 1.4rem; color: var(--muted); font-size: .95rem; }
+  @media (max-width: 700px) { .fler-rutnat { grid-template-columns: 1fr; } }
+
+  .sprakrad { border-bottom: 1px solid var(--line); background: var(--bg); }
+  .sprakrad .wrap { display: flex; justify-content: flex-end; padding: .45rem 0; }
+  .sprakval { display: inline-flex; border: 1.5px solid var(--line); border-radius: 999px; overflow: hidden; background: var(--paper); }
+  .sprakval button { font: inherit; font-size: .85rem; font-weight: 600; padding: .3rem .95rem; border: 0; background: transparent; color: var(--muted); cursor: pointer; }
+  .sprakval button[aria-pressed="true"] { background: var(--navy); color: #FFFFFF; }
+  .sprakval button:focus-visible { outline: 3px solid var(--coral); outline-offset: -3px; }
+
+  footer { padding: 2rem 0 2.5rem; color: var(--muted); font-size: .95rem; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .8rem 2rem; }
+
+  @media (max-width: 880px) {
+    header nav a.lank { display: none; }
+    .hero .wrap, .om .wrap { grid-template-columns: 1fr; }
+    .hero { padding-top: 2.5rem; }
+    .solfjader { height: 21rem; max-width: 26rem; width: 100%; margin-inline: auto; }
+    .steg { grid-template-columns: 1fr 1fr; }
+    .tjanst-lista, .projekt .rad3 { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 480px) { .steg { grid-template-columns: 1fr; } .knappar .btn { flex: 1 1 100%; } }
+  header .btn, .logga span { white-space: nowrap; }
+  @media (max-width: 480px) {
+    header .btn { padding: .5rem .85rem; font-size: .92rem; }
+    .logga { font-size: 1rem; gap: .45rem; }
+    .logga svg { width: 1.8rem; height: 1.8rem; }
+  }
+
+  /* ===== GLASS THEME ===== same palette, frosted-glass surfaces over soft colour light ===== */
+  :root {
+    --glass: color-mix(in srgb, var(--paper) 52%, transparent);
+    --glass-strong: color-mix(in srgb, var(--paper) 84%, transparent);
+    --glass-edge: rgba(255,255,255,.75);
+    --glass-shadow: 0 10px 34px -12px rgba(22,35,63,.28);
+    --glass-hi: inset 0 1px 0 rgba(255,255,255,.85);
+    --blur: blur(18px) saturate(165%);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --glass-edge: rgba(255,255,255,.14); --glass-shadow: 0 10px 34px -12px rgba(0,0,0,.6); --glass-hi: inset 0 1px 0 rgba(255,255,255,.12); }
+  }
+  :root[data-theme="dark"] { --glass-edge: rgba(255,255,255,.14); --glass-shadow: 0 10px 34px -12px rgba(0,0,0,.6); --glass-hi: inset 0 1px 0 rgba(255,255,255,.12); }
+
+  /* the light the glass refracts */
+  body { position: relative; }
+  body::before {
+    content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+    background:
+      radial-gradient(46vmax 46vmax at 88% 6%, rgba(216,90,48,.30), transparent 62%),
+      radial-gradient(52vmax 52vmax at 2% 30%, rgba(22,35,63,.22), transparent 62%),
+      radial-gradient(44vmax 44vmax at 72% 70%, rgba(233,161,135,.40), transparent 62%),
+      radial-gradient(38vmax 38vmax at 8% 96%, rgba(216,90,48,.20), transparent 62%);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) body::before {
+      background:
+        radial-gradient(46vmax 46vmax at 88% 6%, rgba(216,90,48,.34), transparent 62%),
+        radial-gradient(52vmax 52vmax at 2% 30%, rgba(70,100,180,.30), transparent 62%),
+        radial-gradient(44vmax 44vmax at 72% 70%, rgba(233,161,135,.20), transparent 62%),
+        radial-gradient(38vmax 38vmax at 8% 96%, rgba(216,90,48,.22), transparent 62%);
+    }
+  }
+
+  /* glass surfaces */
+  header, .sprakrad {
+    background: var(--glass-strong);
+    -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur);
+    border-bottom: 1px solid var(--glass-edge);
+  }
+  .sprakval { background: var(--glass); -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur); border-color: var(--glass-edge); box-shadow: var(--glass-hi); }
+
+  .steg li, .fall, .fler-kort, .pkt, .villkor, .ruta, .formkort, .resultat, .calendly-kort {
+    background: var(--glass);
+    -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur);
+    border: 1px solid var(--glass-edge);
+    box-shadow: var(--glass-shadow), var(--glass-hi);
+  }
+  .pkt.markerad { border: 1.5px solid color-mix(in srgb, var(--navy) 70%, transparent); background: var(--glass-strong); }
+  .resultat, .calendly-kort { border-color: color-mix(in srgb, var(--coral) 60%, transparent); }
+  .fall .yta { -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .telefon { box-shadow: var(--glass-shadow); border-color: color-mix(in srgb, var(--ink) 88%, transparent); }
+
+  .taggar li, .pris-tagg {
+    background: var(--glass); border: 1px solid var(--glass-edge); box-shadow: var(--glass-hi);
+    -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur);
+  }
+  .grundare-etikett { background: var(--glass); -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur); box-shadow: var(--glass-hi); }
+
+  /* mini sites in the hero: glass frame + shadow */
+  .mini { border: 1px solid var(--glass-edge); box-shadow: 0 26px 50px -22px rgba(22,35,63,.55), var(--glass-hi); }
+  .mini .bar { background: rgba(255,255,255,.55); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+
+  /* dark navy and coral sections become rounded glass-lit panels */
+  section.tjanster, section.kontakt { margin-inline: clamp(.6rem, 2.5vw, 1.8rem); border-radius: 32px; position: relative; overflow: hidden; box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(255,255,255,.25); }
+  section.tjanster { background: linear-gradient(150deg, rgba(31,49,88,.96), rgba(22,35,63,.98) 60%, rgba(40,52,92,.96)); }
+  section.kontakt { background: linear-gradient(150deg, rgba(228,108,66,.98), rgba(216,90,48,.98) 55%, rgba(200,78,40,.98)); }
+  section.tjanster::before, section.kontakt::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(60% 70% at 100% 0%, rgba(255,255,255,.18), transparent 60%), radial-gradient(50% 60% at 0% 100%, rgba(233,161,135,.20), transparent 60%);
+  }
+  section.tjanster > .wrap, section.kontakt > .wrap { position: relative; }
+  .tjanst { border: 1px solid rgba(255,255,255,.14); border-radius: 18px; padding: 1.3rem 1.4rem; margin-bottom: 1rem; background: rgba(255,255,255,.07); -webkit-backdrop-filter: blur(14px) saturate(150%); backdrop-filter: blur(14px) saturate(150%); box-shadow: inset 0 1px 0 rgba(255,255,255,.14); }
+  .tjanst-lista { gap: 0 1.4rem; }
+
+  /* buttons */
+  .btn-coral { background: linear-gradient(180deg, #E26A3F, #D85A30); box-shadow: 0 8px 22px -8px rgba(216,90,48,.7), inset 0 1px 0 rgba(255,255,255,.35); }
+  .btn-coral:hover { background: linear-gradient(180deg, #D85A30, #C24E28); }
+  .btn-linje { background: var(--glass); border-color: var(--glass-edge); box-shadow: var(--glass-hi); -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur); }
+  .kontakt .btn-vit { background: rgba(255,255,255,.92); box-shadow: 0 8px 22px -10px rgba(0,0,0,.35); }
+  .kontakt .btn-linje { background: rgba(255,255,255,.14); border-color: rgba(255,255,255,.55); }
+  .social { background: rgba(255,255,255,.12); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-color: rgba(255,255,255,.5); }
+  .socials-footer .social { background: var(--glass); border-color: var(--glass-edge); }
+  button.btn-linje:hover { background: var(--ink); }
+
+  /* form controls */
+  .formkort input[type="text"], .formkort input[type="url"], .formkort select, .formkort textarea, .resultat-text {
+    background: color-mix(in srgb, var(--paper) 45%, transparent); border: 1px solid var(--glass-edge);
+    box-shadow: inset 0 1px 2px rgba(22,35,63,.08);
+  }
+  .valkort { background: color-mix(in srgb, var(--paper) 45%, transparent); border: 1px solid var(--glass-edge); }
+  .farg input[type="color"] { background: color-mix(in srgb, var(--paper) 45%, transparent); border-color: var(--glass-edge); }
+
+  footer { background: transparent; }
+
+
+  /* ===== PREMIUM GLASS ===== deeper light, hairline edges that catch light, floating nav, fine grain ===== */
+  :root {
+    --edge-grad: linear-gradient(145deg, rgba(255,255,255,.95), rgba(255,255,255,.18) 38%, rgba(233,161,135,.35) 72%, rgba(216,90,48,.45));
+    --spec: radial-gradient(130% 90% at 0% 0%, rgba(255,255,255,.62), rgba(255,255,255,0) 55%);
+    --lift: 0 1px 1px rgba(22,35,63,.06), 0 14px 28px -14px rgba(22,35,63,.22), 0 46px 90px -40px rgba(22,35,63,.34);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --edge-grad: linear-gradient(145deg, rgba(255,255,255,.34), rgba(255,255,255,.05) 40%, rgba(233,161,135,.16) 72%, rgba(216,90,48,.32));
+      --spec: radial-gradient(130% 90% at 0% 0%, rgba(255,255,255,.12), rgba(255,255,255,0) 55%);
+      --lift: 0 1px 1px rgba(0,0,0,.4), 0 14px 28px -14px rgba(0,0,0,.6), 0 46px 90px -40px rgba(0,0,0,.8);
+    }
+  }
+  :root[data-theme="dark"] {
+    --edge-grad: linear-gradient(145deg, rgba(255,255,255,.34), rgba(255,255,255,.05) 40%, rgba(233,161,135,.16) 72%, rgba(216,90,48,.32));
+    --spec: radial-gradient(130% 90% at 0% 0%, rgba(255,255,255,.12), rgba(255,255,255,0) 55%);
+    --lift: 0 1px 1px rgba(0,0,0,.4), 0 14px 28px -14px rgba(0,0,0,.6), 0 46px 90px -40px rgba(0,0,0,.8);
+  }
+
+  /* deeper, slowly drifting light behind the glass */
+  body::before {
+    inset: -18%; z-index: -2;
+    background:
+      radial-gradient(34vmax 34vmax at 86% 10%, rgba(216,90,48,.42), transparent 64%),
+      radial-gradient(40vmax 40vmax at 6% 28%, rgba(40,62,118,.34), transparent 64%),
+      radial-gradient(36vmax 36vmax at 68% 62%, rgba(233,161,135,.55), transparent 64%),
+      radial-gradient(34vmax 34vmax at 14% 88%, rgba(216,90,48,.26), transparent 64%),
+      radial-gradient(28vmax 28vmax at 48% 36%, rgba(255,255,255,.55), transparent 66%);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) body::before {
+      background:
+        radial-gradient(34vmax 34vmax at 86% 10%, rgba(216,90,48,.46), transparent 64%),
+        radial-gradient(40vmax 40vmax at 6% 28%, rgba(60,92,190,.42), transparent 64%),
+        radial-gradient(36vmax 36vmax at 68% 62%, rgba(233,161,135,.22), transparent 64%),
+        radial-gradient(34vmax 34vmax at 14% 88%, rgba(216,90,48,.28), transparent 64%);
+    }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    body::before { animation: drift 46s ease-in-out infinite alternate; will-change: transform; }
+    @keyframes drift {
+      0%   { transform: translate3d(0, 0, 0) rotate(0deg) scale(1); }
+      50%  { transform: translate3d(-3%, 2.5%, 0) rotate(2.5deg) scale(1.06); }
+      100% { transform: translate3d(2.5%, -2%, 0) rotate(-2deg) scale(1.03); }
+    }
+  }
+  /* fine grain */
+  body::after {
+    content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .055;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .6 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+
+  /* type: calmer weight, tighter, larger */
+  h1, h2 { font-weight: 700; letter-spacing: -.04em; }
+  .hero h1 { font-size: clamp(3.1rem, 8.4vw, 6.1rem); line-height: .94; }
+  h2 { font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: .98; }
+  h3 { font-weight: 700; letter-spacing: -.02em; }
+  section.block { padding: clamp(4rem, 9vw, 7rem) 0; }
+  .rubrik p { font-size: 1.12rem; }
+
+  /* floating glass nav */
+  .sprakrad { background: transparent; border-bottom: 0; -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .sprakrad .wrap { padding: .7rem 0 0; }
+  header { background: transparent; border-bottom: 0; -webkit-backdrop-filter: none; backdrop-filter: none; padding-top: .55rem; }
+  header .wrap {
+    height: 3.7rem; padding: 0 .55rem 0 1.1rem; border-radius: 999px; position: relative;
+    background: var(--spec), var(--glass-strong);
+    -webkit-backdrop-filter: blur(22px) saturate(180%); backdrop-filter: blur(22px) saturate(180%);
+    box-shadow: var(--lift), var(--glass-hi);
+  }
+  header .wrap::after { content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; background: var(--edge-grad); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; }
+  header .btn { padding: .62rem 1.15rem; }
+  @media (max-width: 480px) { header .wrap { padding: 0 .4rem 0 .85rem; } }
+
+  /* hero becomes one large glass slab */
+  .hero { padding: 2.2rem 0 3.2rem; }
+  .hero .wrap {
+    position: relative; padding: clamp(1.5rem, 4.4vw, 3.4rem); border-radius: 40px;
+    background: var(--spec), var(--glass);
+    -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur);
+    box-shadow: var(--lift), var(--glass-hi);
+  }
+  .hero .ingress { font-size: 1.2rem; }
+  .solfjader { height: 27rem; }
+
+  /* glass cards: specular top-left, hairline gradient edge, layered shadow, radius by rank */
+  .steg li, .fall, .fler-kort, .pkt, .villkor, .ruta, .formkort, .resultat, .calendly-kort, .tjanst {
+    position: relative; border: 0;
+    background: var(--spec), var(--glass);
+    box-shadow: var(--lift), var(--glass-hi);
+  }
+  .steg li::after, .fall::after, .fler-kort::after, .pkt::after, .villkor::after, .ruta::after, .formkort::after, .resultat::after, .calendly-kort::after, .tjanst::after, .hero .wrap::after {
+    content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; background: var(--edge-grad);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;
+  }
+  .steg li { border-radius: 24px; }
+  .fall { border-radius: 26px; }
+  .fler-kort { border-radius: 22px; }
+  .pkt { border-radius: 30px; padding: 2rem; }
+  .villkor, .ruta { border-radius: 28px; }
+  .formkort { border-radius: 30px; }
+  .resultat, .calendly-kort { border-radius: 28px; }
+  .fall .yta { border-radius: 26px 26px 0 0; }
+
+  .steg li::before { background: linear-gradient(145deg, #2E4274, #16233F); box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 8px 16px -6px rgba(22,35,63,.55); }
+
+  /* featured plan: glows and lifts */
+  .pkt.markerad { border: 0; background: var(--spec), var(--glass-strong); box-shadow: 0 30px 80px -30px rgba(216,90,48,.55), var(--lift), var(--glass-hi); }
+  .pkt.markerad::after { background: linear-gradient(145deg, rgba(255,255,255,.95), rgba(233,161,135,.7) 35%, rgba(216,90,48,.9) 70%, rgba(22,35,63,.55)); padding: 1.5px; }
+  @media (min-width: 881px) { .pkt.markerad { transform: translateY(-8px); } }
+
+  /* dark and coral panels */
+  section.tjanster, section.kontakt { border-radius: 44px; box-shadow: var(--lift), inset 0 1px 0 rgba(255,255,255,.28); }
+  section.tjanster { background: radial-gradient(60% 60% at 90% 100%, rgba(216,90,48,.38), transparent 62%), radial-gradient(55% 60% at 0% 0%, rgba(70,102,190,.45), transparent 62%), linear-gradient(160deg, #1C2C52, #16233F 55%, #121C36); }
+  section.kontakt { background: radial-gradient(60% 70% at 100% 0%, rgba(255,214,190,.55), transparent 60%), radial-gradient(55% 60% at 0% 100%, rgba(150,52,24,.45), transparent 62%), linear-gradient(155deg, #E76F44, #D85A30 55%, #C34B26); }
+  .tjanst { border-radius: 22px; background: linear-gradient(145deg, rgba(255,255,255,.13), rgba(255,255,255,.04)); box-shadow: inset 0 1px 0 rgba(255,255,255,.22), 0 18px 40px -22px rgba(0,0,0,.55); }
+  .tjanst::after { background: linear-gradient(145deg, rgba(255,255,255,.55), rgba(255,255,255,.06) 45%, rgba(233,161,135,.35)); }
+
+  /* controls */
+  .btn { border-radius: 999px; padding: 1.05rem 1.8rem; letter-spacing: -.005em; }
+  .btn-coral { background: linear-gradient(180deg, #EC7449 0%, #D85A30 55%, #CB4E27 100%); box-shadow: 0 14px 30px -12px rgba(216,90,48,.8), inset 0 1px 0 rgba(255,255,255,.45), inset 0 -2px 0 rgba(120,40,16,.18); }
+  .btn-linje { background: var(--spec), var(--glass); }
+  .formkort input[type="text"], .formkort input[type="url"], .formkort select, .formkort textarea, .resultat-text { border-radius: 16px; padding: .9rem 1.05rem; }
+  .valkort { border-radius: 18px; }
+  .taggar li, .pris-tagg { background: var(--spec), var(--glass); box-shadow: var(--glass-hi), 0 6px 14px -8px rgba(22,35,63,.25); }
+  .telefon { border-radius: 38px; }
+
+  @media (prefers-reduced-transparency: reduce) {
+    :root { --glass: var(--paper); --glass-strong: var(--paper); }
+    * { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+  }
+  @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    :root { --glass: color-mix(in srgb, var(--paper) 90%, transparent); --glass-strong: color-mix(in srgb, var(--paper) 94%, transparent); }
+  }
+
+  @media (max-width: 360px) {
+    header .wrap { padding: 0 .3rem 0 .7rem; }
+    header .btn { padding: .45rem .7rem; font-size: .85rem; }
+    .logga { font-size: .92rem; gap: .35rem; }
+    .logga svg { width: 1.6rem; height: 1.6rem; }
+  }
+
+  @media (max-width: 1040px) { header nav a.lank { display: none; } }
+  /* ===== Exempel-sektionen ===== */
+  .exempel .rad3 { grid-template-columns: repeat(6, 1fr); }
+  .exempel .rad3 > a { grid-column: span 2; }
+  .exempel .rad3 > a:nth-child(n+4) { grid-column: span 3; }
+  @media (max-width: 880px) {
+    .exempel .rad3 { grid-template-columns: repeat(2, 1fr); }
+    .exempel .rad3 > a, .exempel .rad3 > a:nth-child(n+4) { grid-column: span 1; }
+    .exempel .rad3 > a:last-child { grid-column: span 2; }
+  }
+  @media (max-width: 560px) {
+    .exempel .rad3 { grid-template-columns: 1fr; }
+    .exempel .rad3 > a:last-child { grid-column: auto; }
+  }
+  .exempel a.fall { display: block; text-decoration: none; color: inherit; transition: transform .25s; }
+  .exempel a.fall:hover { transform: translateY(-4px); }
+  .exempel a.fall:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
+  .exempel .fall .yta { text-align: center; padding: 0 1rem; overflow-wrap: anywhere; }
+  .exempel .fall .text strong { color: var(--coral); font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; }
+  .exempel .fall .text .se { margin-top: .6rem; color: var(--ink); font-weight: 700; }
+  @media (prefers-reduced-motion: reduce) { .exempel a.fall { transition: none; } .exempel a.fall:hover { transform: none; } }
+
+
+  /* ===== Ny hemsida: configurator ===== */
+  .ny-kort { position: relative; padding: 1.5rem; border-radius: 24px; background: var(--spec), var(--glass); -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur); box-shadow: var(--lift), var(--glass-hi); }
+  .ny-kort h3 { font-size: 1.35rem; }
+  .ny-kort p { margin-top: .5rem; color: var(--muted); font-size: 1rem; }
+  .ny-kort .ik { display: grid; place-items: center; width: 2.6rem; height: 2.6rem; border-radius: 14px; margin-bottom: 1rem; background: linear-gradient(145deg, #2E4274, #16233F); color: #FFFFFF; }
+  .ny-kort .ik svg { width: 1.3rem; height: 1.3rem; }
+  .ny-rutnat { margin-top: 2.2rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .ny-byggrad { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 2rem; align-items: start; margin-top: 2.4rem; }
+  .ny-grupp { border: 0; margin: 0 0 1.2rem; padding: 1.4rem; border-radius: 24px; background: var(--spec), var(--glass); -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur); box-shadow: var(--lift), var(--glass-hi); min-width: 0; }
+  .ny-grupp legend { padding: 0; font-family: var(--display); font-weight: 800; font-size: 1.3rem; letter-spacing: -.02em; float: left; width: 100%; margin-bottom: .2rem; }
+  .ny-grupp .hjalp { clear: both; color: var(--muted); font-size: .95rem; margin-bottom: .9rem; }
+  .ny-val { display: flex; flex-wrap: wrap; gap: .5rem; clear: both; }
+  .ny-val label { position: relative; max-width: 100%; }
+  .ny-val input { position: absolute; opacity: 0; inset: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+  .ny-val span.chip { display: inline-flex; flex-wrap: wrap; align-items: center; gap: .15rem .5rem; max-width: 100%; white-space: normal; padding: .6rem 1rem; border-radius: 999px; border: 1.5px solid var(--line); background: color-mix(in srgb, var(--paper) 70%, transparent); font-weight: 600; font-size: .98rem; }
+  .ny-val input:checked + span.chip { border-color: var(--coral); background: color-mix(in srgb, var(--coral) 14%, var(--paper)); }
+  .ny-val input:focus-visible + span.chip { outline: 3px solid var(--coral); outline-offset: 2px; }
+  .ny-val .pris { color: var(--muted); font-weight: 500; font-size: .88rem; }
+  .ny-rad { display: grid; gap: .55rem; clear: both; }
+  .ny-rad label { display: flex; align-items: flex-start; gap: .7rem; padding: .8rem 1rem; border-radius: 16px; border: 1.5px solid var(--line); background: color-mix(in srgb, var(--paper) 70%, transparent); cursor: pointer; }
+  .ny-rad label:has(input:checked) { border-color: var(--coral); background: color-mix(in srgb, var(--coral) 12%, var(--paper)); }
+  .ny-rad input { margin-top: .3rem; accent-color: #D85A30; }
+  .ny-rad b { display: block; }
+  .ny-rad small { color: var(--muted); }
+  .ny-paletter { display: flex; flex-wrap: wrap; gap: .6rem; clear: both; }
+  .ny-paletter button { display: grid; grid-template-columns: 1fr 1fr 1fr; width: 4.4rem; height: 2.6rem; padding: 0; border-radius: 12px; overflow: hidden; border: 2px solid var(--line); cursor: pointer; background: none; }
+  .ny-paletter button[aria-pressed="true"] { border-color: var(--coral); box-shadow: 0 0 0 3px color-mix(in srgb, var(--coral) 30%, transparent); }
+  .ny-paletter button i { display: block; }
+  .ny-eget { margin-top: .9rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; clear: both; }
+  .ny-eget label { display: flex; align-items: center; gap: .6rem; font-weight: 600; font-size: .95rem; }
+  .ny-eget input[type="color"] { width: 2.8rem; height: 2.4rem; border: 1.5px solid var(--line); border-radius: 10px; padding: 2px; background: var(--paper); cursor: pointer; }
+  .ny-eget input[type="color"]:disabled { opacity: .4; cursor: not-allowed; }
+  .ny-valj-at { margin-top: .8rem; display: flex; align-items: center; gap: .6rem; clear: both; font-weight: 500; }
+  .ny-valj-at input { accent-color: #D85A30; }
+
+  .ny-hoger { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 5.2rem); }
+  .ny-forhand { border-radius: 26px; padding: .8rem; background: var(--spec), var(--glass-strong); -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur); box-shadow: var(--lift), var(--glass-hi); }
+  .ny-forhand .rubr { display: flex; justify-content: space-between; align-items: baseline; gap: .6rem; padding: .3rem .5rem .7rem; font-size: .88rem; color: var(--muted); font-weight: 600; }
+  .ny-forhand .rubr b { color: var(--ink); font-family: var(--display); font-size: 1.05rem; }
+  .pv { --m: #16233F; --a: #D85A30; --mt: #FFFFFF; --at: #FFFFFF; --r: 16px; --pf: var(--display); --pw: 700; --pt: none; border-radius: 16px; overflow: hidden; background: #FFFFFF; color: #1B2236; border: 1px solid rgba(0,0,0,.12); font-family: var(--pf); }
+  .pv .chrome { display: flex; gap: .3rem; padding: .5rem .7rem; background: #ECECEC; }
+  .pv .chrome i { width: .55rem; height: .55rem; border-radius: 50%; background: #BDBDBD; }
+  .pv .nav { display: flex; justify-content: space-between; align-items: center; padding: .7rem 1rem; background: var(--m); color: var(--mt); font-weight: var(--pw); font-size: .95rem; text-transform: var(--pt); }
+  .pv .nav span:last-child { display: flex; gap: .7rem; font-weight: 500; font-size: .78rem; opacity: .85; font-family: var(--sans); text-transform: none; }
+  .pv .hero-pv { padding: 1.5rem 1rem 1.6rem; background: var(--m); color: var(--mt); }
+  .pv .hero-pv h4 { margin: 0; font-size: 1.7rem; line-height: 1; font-weight: var(--pw); letter-spacing: -.02em; text-transform: var(--pt); }
+  .pv .hero-pv p { margin: .6rem 0 0; font-family: var(--sans); font-size: .86rem; opacity: .85; max-width: 20rem; }
+  .pv .hero-pv .kn { margin-top: 1rem; display: flex; gap: .5rem; flex-wrap: wrap; }
+  .pv .hero-pv .kn span { display: inline-block; padding: .55rem 1rem; border-radius: var(--r); background: var(--a); color: var(--at); font-weight: 700; font-size: .82rem; font-family: var(--sans); }
+  .pv .hero-pv .kn span.lin { background: transparent; border: 1.5px solid currentColor; color: var(--mt); }
+  .pv .rader-pv { padding: .9rem 1rem 1.1rem; display: grid; gap: .6rem; font-family: var(--sans); font-size: .8rem; }
+  .pv .rader-pv > div { padding: .6rem .8rem; border-radius: min(calc(var(--r) * .7), 18px); border: 1px solid rgba(0,0,0,.1); background: #FAFAFA; }
+  .pv .rader-pv b { color: var(--m); }
+  .pv .bilder-pv { display: grid; grid-template-columns: repeat(3, 1fr); gap: .4rem; padding: 0 !important; border: 0 !important; background: none !important; }
+  .pv .bilder-pv i { display: block; aspect-ratio: 1; border-radius: min(calc(var(--r) * .6), 14px); background: linear-gradient(135deg, var(--a), var(--m)); opacity: .85; }
+  .pv .karta-pv { height: 3.6rem; background: repeating-linear-gradient(45deg, #EFEFEF 0 8px, #E4E4E4 8px 16px) !important; display: grid; place-items: center; }
+  .pv .karta-pv i { width: .9rem; height: .9rem; border-radius: 50% 50% 50% 0; background: var(--a); transform: rotate(-45deg); }
+  .pv .skugga-pv { height: 2.2rem; background: linear-gradient(var(--m), var(--m)); opacity: .08; }
+  .pv .fot-pv { padding: .6rem 1rem; background: var(--m); color: var(--mt); font-family: var(--sans); font-size: .72rem; opacity: .95; }
+  .pv[data-stil="glansig"] { --r: 999px; }
+  .pv[data-stil="glansig"] .hero-pv { background: linear-gradient(135deg, var(--m), var(--a)); }
+  .pv[data-stil="glansig"] .hero-pv .kn span { box-shadow: 0 6px 14px -6px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.5); }
+  .pv[data-stil="glansig"] .rader-pv > div { border-radius: 18px; }
+  .pv[data-stil="varm"] { --r: 22px; --pw: 800; }
+  .pv[data-stil="ren"] { --r: 6px; --pw: 600; --pf: var(--sans); }
+  .pv[data-stil="ren"] .hero-pv { background: #FFFFFF; color: var(--m); border-bottom: 1px solid rgba(0,0,0,.1); }
+  .pv[data-stil="ren"] .hero-pv .kn span.lin { color: var(--m); }
+  .pv[data-stil="kraftfull"] { --r: 2px; --pw: 800; --pt: uppercase; }
+  .pv[data-stil="kraftfull"] .hero-pv h4 { font-size: 2rem; }
+  .pv[data-stil="kraftfull"] .hero-pv .kn span { border: 2px solid var(--mt); }
+  .pv[data-stil="klassisk"] { --r: 0px; --pf: Georgia, "Times New Roman", serif; --pw: 700; }
+  .pv[data-stil="klassisk"] .hero-pv { border-bottom: 4px double var(--a); }
+  .pv[data-stil="klassisk"] .hero-pv h4 { font-style: italic; font-weight: 700; }
+  .ny-pristagg { margin-top: .8rem; padding: .9rem 1rem; border-radius: 18px; background: var(--navy); color: #FFFFFF; display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+  .ny-pristagg b { font-family: var(--display); font-size: 1.6rem; line-height: 1; }
+  .ny-pristagg small { color: #C7CEE0; }
+  .ny-sammanst { margin-top: 1.4rem; padding: 1.6rem; border-radius: 28px; background: var(--spec), var(--glass-strong); -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur); box-shadow: var(--lift), var(--glass-hi); }
+  .ny-sammanst h3 { font-size: 1.6rem; }
+  .ny-sammanst ul { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; gap: .5rem; }
+  .ny-sammanst li { display: flex; justify-content: space-between; gap: 1rem; padding-bottom: .5rem; border-bottom: 1px solid var(--line); }
+  .ny-sammanst li span:last-child { font-weight: 700; white-space: nowrap; }
+  .ny-totalrad { margin-top: 1rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .4rem 1rem; }
+  .ny-totalrad b { font-family: var(--display); font-weight: 800; font-size: clamp(1.5rem, 6.4vw, 2.2rem); line-height: 1.05; text-align: right; overflow-wrap: anywhere; max-width: 100%; }
+  .ny-not { margin-top: .9rem; color: var(--muted); font-size: .92rem; }
+  .ny-faq { margin-top: 2rem; display: grid; gap: .7rem; }
+  .ny-faq details { border-radius: 20px; padding: 1.1rem 1.3rem; background: var(--spec), var(--glass); -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur); box-shadow: var(--lift), var(--glass-hi); }
+  .ny-faq summary { cursor: pointer; font-weight: 700; font-size: 1.05rem; }
+  .ny-faq p { margin-top: .7rem; color: var(--muted); }
+  .ny-forslag { margin-top: 2rem; max-width: 40rem; }
+  .ny-forslag .falt { margin-bottom: .9rem; }
+  .ny-forslag textarea { width: 100%; font: inherit; padding: .8rem 1rem; border-radius: 14px; border: 1.5px solid var(--line); background: var(--paper); color: var(--ink); min-height: 6rem; }
+  .ny-forslag input[type="text"], .ny-forslag input[type="email"] { width: 100%; font: inherit; padding: .8rem 1rem; border-radius: 14px; border: 1.5px solid var(--line); background: var(--paper); color: var(--ink); }
+  .ny-forslag label.l { display: block; font-weight: 600; margin-bottom: .3rem; font-size: .95rem; }
+  .ny-svar { margin-top: 1rem; padding: 1.2rem; border-radius: 18px; background: color-mix(in srgb, var(--coral) 10%, var(--paper)); }
+  .ny-svar[hidden] { display: none; }
+  .ny-knappar { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: .7rem; }
+  .ny-fel { color: #B3261E; font-weight: 600; margin-top: .4rem; }
+  .ny-tillbaka { display: inline-block; margin-bottom: 1rem; color: var(--muted); font-weight: 600; text-decoration: none; }
+  .ny-tillbaka:hover { color: var(--coral); }
+  @media (max-width: 960px) {
+    .ny-byggrad { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+    .ny-hoger { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 4.4rem); z-index: 6; order: -1; }
+    .ny-forhand { padding: .5rem; }
+    .pv .rader-pv, .pv .fot-pv, .pv .skugga-pv { display: none; }
+    .pv .hero-pv { padding: 1rem; }
+    .pv .hero-pv h4 { font-size: 1.3rem; }
+    .pv .hero-pv p { display: none; }
+    .ny-rutnat { grid-template-columns: 1fr; }
+  }
+
+
+  .hero h1 { font-size: clamp(2.4rem, 9.6vw, 6.1rem); overflow-wrap: anywhere; }</style>
+</head>
+<body>
+<div class="sprakrad">
+  <div class="wrap">
+    <div class="sprakval" role="group" aria-label="Språk / Language">
+      <button type="button" data-lang="sv" aria-pressed="true" lang="sv">Svenska</button>
+      <button type="button" data-lang="en" aria-pressed="false" lang="en">English</button>
+    </div>
+  </div>
+</div>
+<header>
+  <div class="wrap">
+    <a class="logga" href="index.html" aria-label="Alhindawi Digital, till toppen">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#16233F"/><path d="M19 48 L32 18 L45 48" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><rect x="24" y="36" width="16" height="4.5" rx="1" fill="#D85A30"/><circle cx="43" cy="17" r="3" fill="#D85A30"/></svg>
+      <span>Alhindawi <em>Digital</em></span>
+    </a>
+    <nav aria-label="Huvudmeny">
+      <a class="lank" href="index.html#sa-funkar-det">Så funkar det</a>
+      <a class="lank" href="index.html#tjanster">Tjänster</a>
+      <a class="lank" href="index.html#fler">Fler tjänster</a>
+      <a class="lank" href="index.html#projekt">Projekt</a>
+      <a class="lank" href="index.html#exempel">Exempel</a>
+      <a class="lank" href="index.html#priser">Priser</a>
+      <a class="lank" href="index.html#boka">Boka samtal</a>
+      <a class="btn btn-coral" href="#forslag">Få ett förslag</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <a class="ny-tillbaka" href="index.html#fler">&larr; Alla tjänster</a>
+        <h1>Texter och <span>mejl.</span></h1>
+        <p class="ingress">Kundmejl, nyhetsbrev och svar på omdömen, skrivna på svenska eller engelska.</p>
+        <div class="knappar">
+          <a class="btn btn-coral" href="#val">Gör dina val</a>
+          <a class="btn btn-linje" href="#priset">Se priset</a>
+        </div>
+        <p class="notis">Du får priset skriftligt innan jag börjar, och du betalar inget förrän du sagt ja.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="gor-rubrik">
+    <div class="wrap">
+      <div class="rubrik"><h2 id="gor-rubrik">Det här gör jag</h2><p>Du säger vad du vill få sagt, jag skriver det.</p></div>
+      <div class="ny-rutnat"><div class="ny-kort"><div class="ik"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div><h3>Kundmejl</h3><p>Mejl till dina kunder, skrivna åt dig.</p></div><div class="ny-kort"><div class="ik"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h13v14H6a2 2 0 0 1-2-2z"/><path d="M17 8h3v9a2 2 0 0 1-2 2M7 9h7M7 13h7"/></svg></div><h3>Nyhetsbrev</h3><p>Nyhetsbrev som du kan skicka ut.</p></div><div class="ny-kort"><div class="ik"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg></div><h3>Svar på omdömen</h3><p>Svar på omdömen, så att du slipper formulera dem själv.</p></div></div>
+    </div>
+  </section>
+
+  <section class="block" id="val" aria-labelledby="val-rubrik">
+    <div class="wrap">
+      <div class="rubrik"><h2 id="val-rubrik">Vad behöver du hjälp att skriva?</h2><p>Välj vad du vill ha hjälp med, så vet jag var vi börjar.</p></div>
+      <div style="margin-top:2.2rem">
+<div class="ny-kontroller" style="max-width:46rem">
+<fieldset class="ny-grupp" data-g="vad"><legend>1. Vad behöver du hjälp med?</legend><div class="ny-val"><label><input type="checkbox" name="vad" value="Kundmejl"><span class="chip">Kundmejl</span></label><label><input type="checkbox" name="vad" value="Nyhetsbrev"><span class="chip">Nyhetsbrev</span></label><label><input type="checkbox" name="vad" value="Svar på omdömen"><span class="chip">Svar på omdömen</span></label></div></fieldset>
+<fieldset class="ny-grupp" data-g="sprak"><legend>2. På vilket språk?</legend><div class="ny-val"><label><input type="checkbox" name="sprak" value="Svenska" checked><span class="chip">Svenska</span></label><label><input type="checkbox" name="sprak" value="Engelska"><span class="chip">Engelska</span></label></div></fieldset>
+<fieldset class="ny-grupp" data-g="berattar"><legend>3. Berätta kort vad det gäller</legend><div class="falt" style="clear:both"><input type="text" id="g-berattar" placeholder="Till exempel: ett mejl om nya öppettider" style="width:100%;font:inherit;padding:.8rem 1rem;border-radius:14px;border:1.5px solid var(--line);background:var(--paper);color:var(--ink)"></div></fieldset>
+</div>
+      </div>
+      <div class="ny-sammanst" id="priset" aria-live="polite">
+        <h3>Din uppskattning</h3>
+        <ul id="sam-lista"></ul>
+        <div class="ny-totalrad"><span id="sam-etikett">Pris</span><b id="sam-total"></b></div>
+        <p class="ny-not" id="sam-not"></p>
+        <p class="ny-not">Alla priser är startpriser. Du får det slutliga priset och vad som ingår skriftligt innan jag börjar, och betalar via Swish.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="steg-rubrik">
+    <div class="wrap">
+      <div class="rubrik"><h2 id="steg-rubrik">Så går det till</h2><p>Enkelt och utan överraskningar.</p></div>
+      <ol class="steg"><li><h3>Du berättar vad du behöver</h3><p>Du fyller i dina val här, eller skriver till mig.</p></li><li><h3>Du får priset skriftligt</h3><p>Innan jag börjar får du priset och vad som ingår, så att vi är överens.</p></li><li><h3>Du säger ja</h3><p>Betalning sker via Swish. Du får en bekräftelse via mejl.</p></li><li><h3>Jag gör jobbet</h3><p>Du får resultatet, och kan be om justeringar.</p></li></ol>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="faq-rubrik">
+    <div class="wrap">
+      <div class="rubrik"><h2 id="faq-rubrik">Vanliga frågor</h2></div>
+      <div class="ny-faq"><details><summary>Vad händer om jag inte vill gå vidare?</summary><p>Då betalar du ingenting. Du får priset skriftligt innan jag börjar, och du bestämmer om du vill gå vidare.</p></details><details><summary>Hur betalar jag?</summary><p>Via Swish. Innan jag börjar får du priset och vad som ingår skriftligt. Swish-uppgifter skickar jag när vi har kommit överens, och du får en bekräftelse via mejl.</p></details></div>
+    </div>
+  </section>
+
+  <section class="block" id="forslag" aria-labelledby="fors-rubrik">
+    <div class="wrap">
+      <div class="rubrik"><h2 id="fors-rubrik">Skicka din förfrågan</h2><p>Dina val följer med automatiskt. Jag återkommer så snart jag kan.</p></div>
+      <form class="ny-forslag" id="ny-form" novalidate>
+        <div class="falt"><label class="l" for="f-foretag">Företagets namn</label><input type="text" id="f-foretag" autocomplete="organization"></div>
+        <div class="falt"><label class="l" for="f-namn">Ditt namn</label><input type="text" id="f-namn" autocomplete="name"></div>
+        <div class="falt"><label class="l" for="f-kontakt">Mejl eller telefon</label><input type="text" id="f-kontakt" autocomplete="email"></div>
+        <div class="falt"><label class="l" for="f-medd">Något mer jag bör veta? (valfritt)</label><textarea id="f-medd"></textarea></div>
+        <p class="ny-fel" id="f-fel" role="alert" hidden></p>
+        <div class="ny-knappar">
+          <button class="btn btn-coral" type="submit">Skicka via mejl</button>
+          <a class="btn btn-linje" id="f-wa" href="https://wa.me/46762585216" target="_blank" rel="noopener">Skriv på WhatsApp</a>
+          <a class="btn btn-linje" href="https://calendly.com/alhindawi-digital/30min" target="_blank" rel="noopener">Boka samtal</a>
+        </div>
+        <div class="ny-svar" id="f-svar" hidden>Din mejlapp ska ha öppnats med dina val ifyllda. Tryck på skicka där. Hände inget? Kopiera sammanfattningen och skicka den till <a href="mailto:alhindawi.digital@gmail.com">alhindawi.digital@gmail.com</a>.<br><br><button class="btn btn-linje" type="button" id="f-kopiera">Kopiera sammanfattningen</button></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Alhindawi Digital, Köping</span>
+    <div class="socials socials-footer">
+        <a class="social" href="https://instagram.com/alhindawidigital" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+        <a class="social" href="https://www.tiktok.com/@alhindawi.digital" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.8c-.9-.6-1.5-1.5-1.7-2.6V3h-3.2v12.6a2.7 2.7 0 1 1-2.7-2.7c.3 0 .5 0 .8.1V9.7a6 6 0 1 0 5.1 5.9V9.3a7.6 7.6 0 0 0 4.4 1.4V7.5a4.4 4.4 0 0 1-2.7-1.7z"/></svg></a>
+        <a class="social" href="https://wa.me/46762585216" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        <a class="social" href="mailto:alhindawi.digital@gmail.com" aria-label="Mejla Alhindawi Digital"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7.5l8 6 8-6"/></svg></a>
+      </div>
+    <a href="mailto:alhindawi.digital@gmail.com">alhindawi.digital@gmail.com</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var CFG = {"namn": "Texter och mejl", "pris": {"typ": "fran", "bas": 295, "etikett": "Texter och mejl", "totalEtikett": "Pris", "nota": "Priset beror på hur mycket som ska skrivas.", "en": {"etikett": "Copy and emails", "totalEtikett": "Price", "nota": "The price depends on how much needs to be written."}}, "groups": [{"id": "vad", "type": "check", "kort": "Behöver"}, {"id": "sprak", "type": "check", "kort": "Språk"}, {"id": "berattar", "type": "text", "kort": "Det gäller"}]};
+  function lang() { return document.documentElement.lang === 'en' ? 'en' : 'sv'; }
+  function kr(n, l) { l = l || lang(); return (l === 'en' ? n.toLocaleString('en-US') + ' SEK' : n.toLocaleString('sv-SE').replace(/\u00a0/g, ' ') + ' kr'); }
+  var W = {
+    sv: { fran: 'från ', Fran: 'Från ', mnad: ' kr/mån', pm: '/mån', utan: 'Utan skötsel', styck: ' kr per ändring, ', permanad: ' per månad', med: 'Med skötsel', i1: 'Med skötsel ingår upp till ', i2: ' mindre ändringar i månaden. ', fler: 'För fler får du pris skriftligt. ', fel: 'Fyll i företagets namn, ditt namn och hur jag når dig.', kop: 'Kopierad', man: 'Markera och kopiera texten manuellt' },
+    en: { fran: 'from ', Fran: 'From ', mnad: ' SEK/month', pm: '/month', utan: 'Without maintenance', styck: ' SEK per change, ', permanad: ' per month', med: 'With maintenance', i1: 'With maintenance, up to ', i2: ' small changes a month are included. ', fler: 'For more you get a price in writing. ', fel: 'Please fill in the business name, your name and how I can reach you.', kop: 'Copied', man: 'Select and copy the text manually' }
+  };
+  function T(P, key, l) { return (l === 'en' && P.en && P.en[key]) ? P.en[key] : P[key]; }
+  function vals(name) { return Array.prototype.map.call(document.querySelectorAll('input[name="' + name + '"]:checked'), function (e) { return e.value; }); }
+  function sel(name) { return document.querySelector('input[name="' + name + '"]:checked'); }
+  function pris(l) {
+    l = l || lang(); var w = W[l], P = CFG.pris, rader = [], total = '', not = T(P, 'nota', l) || '';
+    if (P.typ === 'fran') { rader.push([T(P, 'etikett', l), w.fran + kr(P.bas, l)]); total = w.Fran + kr(P.bas, l); }
+    else if (P.typ === 'antal') {
+      var s = sel(P.grupp), n = s ? parseInt(s.getAttribute('data-n'), 10) : 1, sum = n * P.per;
+      rader.push([T(P, 'etikett', l) + ' × ' + n, (P.fran ? w.fran : '') + kr(sum, l)]); total = (P.fran ? w.Fran : '') + kr(sum, l);
+    } else if (P.typ === 'jamfor') {
+      var q = sel(P.grupp), a = q ? parseInt(q.getAttribute('data-n'), 10) : 1, utan = a * P.styck;
+      rader.push([w.utan + ' (' + P.styck + w.styck + a + w.permanad + ')', kr(utan, l) + w.pm]);
+      rader.push([w.med, P.mnad + w.mnad]);
+      total = P.mnad + w.mnad;
+      not = (a > P.ingar ? w.i1 + P.ingar + w.i2 + w.fler : w.i1 + P.ingar + w.i2) + not;
+    } else { total = T(P, 'totaltext', l) || ''; }
+    return { rader: rader, total: total, not: not };
+  }
+  function uppdatera() {
+    var p = pris(), P = CFG.pris, l = lang();
+    document.getElementById('sam-lista').innerHTML = p.rader.map(function (r) { return '<li><span>' + r[0] + '</span><span>' + r[1] + '</span></li>'; }).join('');
+    document.getElementById('sam-lista').hidden = !p.rader.length;
+    document.getElementById('sam-etikett').textContent = T(P, 'totalEtikett', l) || (l === 'en' ? 'Price' : 'Pris');
+    document.getElementById('sam-total').textContent = p.total;
+    document.getElementById('sam-not').textContent = p.not;
+    if (window.__pv) window.__pv();
+  }
+  window.__relang = uppdatera;
+  function sammanfattning() {
+    var p = pris('sv'), r = ['Hej! Jag vill fråga om: ' + CFG.namn + '.', ''];
+    r.push('Företag: ' + document.getElementById('f-foretag').value.trim());
+    r.push('Namn: ' + document.getElementById('f-namn').value.trim());
+    r.push('Kontakt: ' + document.getElementById('f-kontakt').value.trim());
+    if (window.__pvText) r = r.concat(window.__pvText());
+    CFG.groups.forEach(function (g) {
+      var v;
+      if (g.type === 'text') v = (document.getElementById('g-' + g.id) || {}).value || '';
+      else if (g.type === 'radio') { var s = sel(g.id); v = s ? s.value : ''; }
+      else v = vals(g.id).join(', ');
+      v = String(v).trim(); if (v) r.push(g.kort + ': ' + v);
+    });
+    r.push('Pris: ' + p.total);
+    var med = document.getElementById('f-medd').value.trim(); if (med) r.push('', 'Meddelande: ' + med);
+    r.push('', 'Mvh');
+    return r.join('\n');
+  }
+  document.addEventListener('change', function (e) { if (e.target.closest('.ny-grupp')) uppdatera(); });
+  document.addEventListener('input', function (e) { if (e.target.id && e.target.id.indexOf('g-') === 0) uppdatera(); });
+  var form = document.getElementById('ny-form'), fel = document.getElementById('f-fel'), svar = document.getElementById('f-svar');
+  function kolla() {
+    if (!document.getElementById('f-foretag').value.trim() || !document.getElementById('f-namn').value.trim() || !document.getElementById('f-kontakt').value.trim()) { fel.textContent = W[lang()].fel; fel.hidden = false; return false; }
+    fel.hidden = true; return true;
+  }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); if (!kolla()) return;
+    window.location.href = 'mailto:alhindawi.digital@gmail.com?subject=' + encodeURIComponent(CFG.namn + ': ' + document.getElementById('f-foretag').value.trim()) + '&body=' + encodeURIComponent(sammanfattning());
+    svar.hidden = false;
+  });
+  document.getElementById('f-wa').addEventListener('click', function (e) {
+    if (!kolla()) { e.preventDefault(); return; }
+    this.href = 'https://wa.me/46762585216?text=' + encodeURIComponent(sammanfattning());
+  });
+  document.getElementById('f-kopiera').addEventListener('click', function () {
+    var b = this, w = W[lang()]; try { navigator.clipboard.writeText(sammanfattning()).then(function () { b.textContent = w.kop; }); } catch (er) { b.textContent = w.man; }
+  });
+  
+  uppdatera();
+})();
+</script>
+<script>
+(function () {
+  var DATA = {"EN": {"Så funkar det": "How it works", "Tjänster": "Services", "Fler tjänster": "More services", "Projekt": "Projects", "Exempel": "Examples", "Priser": "Pricing", "Boka samtal": "Book a call", "Få ett förslag": "Get a proposal", "← Alla tjänster": "← All services", "Texter och": "Copy and", "mejl.": "emails.", "Kundmejl, nyhetsbrev och svar på omdömen, skrivna på svenska eller engelska.": "Customer emails, newsletters and replies to reviews, written in Swedish or English.", "Gör dina val": "Make your choices", "Se priset": "See the price", "Du får priset skriftligt innan jag börjar, och du betalar inget förrän du sagt ja.": "You get the price in writing before I start, and you pay nothing until you have said yes.", "Det här gör jag": "What I do", "Du säger vad du vill få sagt, jag skriver det.": "You say what you want said, and I write it.", "Kundmejl": "Customer emails", "Mejl till dina kunder, skrivna åt dig.": "Emails to your customers, written for you.", "Nyhetsbrev": "Newsletter", "Nyhetsbrev som du kan skicka ut.": "Newsletters you can send out.", "Svar på omdömen": "Replies to reviews", "Svar på omdömen, så att du slipper formulera dem själv.": "Replies to reviews, so you do not have to word them yourself.", "Vad behöver du hjälp att skriva?": "What do you need help writing?", "Välj vad du vill ha hjälp med, så vet jag var vi börjar.": "Choose what you want help with, and I will know where we start.", "1. Vad behöver du hjälp med?": "1. What do you need help with?", "2. På vilket språk?": "2. In which language?", "Svenska": "Swedish", "Engelska": "English", "3. Berätta kort vad det gäller": "3. Tell me briefly what it is about", "Din uppskattning": "Your estimate", "Pris": "Price", "Alla priser är startpriser. Du får det slutliga priset och vad som ingår skriftligt innan jag börjar, och betalar via Swish.": "All prices are starting prices. You get the final price and what's included in writing before I begin, and you pay via Swish.", "Så går det till": "The process", "Enkelt och utan överraskningar.": "Simple and without surprises.", "Du berättar vad du behöver": "You tell me what you need", "Du fyller i dina val här, eller skriver till mig.": "You fill in your choices here, or write to me.", "Du får priset skriftligt": "You get the price in writing", "Innan jag börjar får du priset och vad som ingår, så att vi är överens.": "Before I start you get the price and what is included, so that we agree.", "Du säger ja": "You say yes", "Betalning sker via Swish. Du får en bekräftelse via mejl.": "Payment is made via Swish. You get a confirmation by email.", "Jag gör jobbet": "I do the work", "Du får resultatet, och kan be om justeringar.": "You get the result, and can ask for adjustments.", "Vanliga frågor": "Common questions", "Vad händer om jag inte vill gå vidare?": "What happens if I don't want to go ahead?", "Då betalar du ingenting. Du får priset skriftligt innan jag börjar, och du bestämmer om du vill gå vidare.": "Then you pay nothing. You get the price in writing before I start, and you decide whether to go ahead.", "Hur betalar jag?": "How do I pay?", "Via Swish. Innan jag börjar får du priset och vad som ingår skriftligt. Swish-uppgifter skickar jag när vi har kommit överens, och du får en bekräftelse via mejl.": "Via Swish. Before I start you get the price and what is included in writing. I send the Swish details once we have agreed, and you get a confirmation by email.", "Skicka din förfrågan": "Send your enquiry", "Dina val följer med automatiskt. Jag återkommer så snart jag kan.": "Your choices are included automatically. I will get back to you as soon as I can.", "Företagets namn": "Business name", "Ditt namn": "Your name", "Mejl eller telefon": "Email or phone", "Något mer jag bör veta? (valfritt)": "Anything else I should know? (optional)", "Skicka via mejl": "Send by email", "Skriv på WhatsApp": "Message on WhatsApp", "Din mejlapp ska ha öppnats med dina val ifyllda. Tryck på skicka där. Hände inget? Kopiera sammanfattningen och skicka den till": "Your email app should have opened with your choices filled in. Press send there. Nothing happened? Copy the summary and send it to", "Kopiera sammanfattningen": "Copy the summary"}, "ATTR": {"Alhindawi Digital, till toppen": "Alhindawi Digital, back to top", "Huvudmeny": "Main menu", "Till exempel: ett mejl om nya öppettider": "For example: an email about new opening hours", "Mejla Alhindawi Digital": "Email Alhindawi Digital", "Accentfärg": "Accent colour", "Adress, till exempel dittforetag.se": "Address, for example yourbusiness.se", "Förhandsvisning": "Preview", "Huvudfärg": "Main colour", "Till exempel dittforetag.se": "For example yourbusiness.se", "Till exempel dittforetag.se/meny": "For example yourbusiness.se/menu", "Till exempel: 20 sekunder där vi visar nya menyn": "For example: 20 seconds where we show the new menu", "Till exempel: Salong Exempel, Köping": "For example: Example Salon, Köping", "Palett: Marin och korall": "Palette: Navy and coral", "Palett: Kaffe och grädde": "Palette: Coffee and cream", "Palett: Skog och salvia": "Palette: Forest and sage", "Palett: Svart och guld": "Palette: Black and gold", "Palett: Plommon och rosa": "Palette: Plum and pink", "Palett: Hav och mint": "Palette: Sea and mint"}, "T": "Copy and emails – Alhindawi Digital", "D": "Customer emails, newsletters and replies to reviews, written in Swedish or English. From 295 SEK."};
+  var EN = DATA.EN, ATTR = DATA.ATTR, REV = {}, ATTR_REV = {};
+  Object.keys(EN).forEach(function (k) { if (EN[k] !== k) REV[EN[k]] = k; });
+  Object.keys(ATTR).forEach(function (k) { if (ATTR[k] !== k) ATTR_REV[ATTR[k]] = k; });
+  var SKIP = { SCRIPT: 1, STYLE: 1, TEXTAREA: 1, NOSCRIPT: 1 };
+  var has = Object.prototype.hasOwnProperty;
+  var descEl = document.querySelector('meta[name="description"]');
+  var origTitle = document.title, origDesc = descEl ? descEl.getAttribute('content') : '';
+  function swapText(map) {
+    var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n, list = [];
+    while ((n = w.nextNode())) list.push(n);
+    list.forEach(function (n) {
+      var p = n.parentNode; if (!p || SKIP[p.nodeName]) return;
+      if (p.closest && p.closest('.sprakval')) return;
+      var raw = n.nodeValue, key = raw.replace(/\u00ad/g, '').trim();
+      if (!key || !has.call(map, key)) return;
+      var m = raw.match(/^(\s*)([\s\S]*?)(\s*)$/);
+      n.nodeValue = m[1] + map[key] + m[3];
+    });
+  }
+  function swapAttrs(map) {
+    ['aria-label', 'alt', 'placeholder'].forEach(function (a) {
+      document.querySelectorAll('[' + a + ']').forEach(function (el) {
+        var v = el.getAttribute(a);
+        if (has.call(map, v)) el.setAttribute(a, map[v]);
+      });
+    });
+  }
+  function ui(lang) {
+    document.querySelectorAll('.sprakval button').forEach(function (b) {
+      b.setAttribute('aria-pressed', b.getAttribute('data-lang') === lang ? 'true' : 'false');
+    });
+  }
+  function apply(lang, save) {
+    var cur = document.documentElement.lang === 'en' ? 'en' : 'sv';
+    if (lang !== cur) {
+      if (lang === 'en') { swapText(EN); swapAttrs(ATTR); document.title = DATA.T; if (descEl) descEl.setAttribute('content', DATA.D); }
+      else { swapText(REV); swapAttrs(ATTR_REV); document.title = origTitle; if (descEl) descEl.setAttribute('content', origDesc); }
+      document.documentElement.lang = lang;
+    }
+    ui(lang);
+    if (window.__relang) window.__relang();
+    if (save) { try { localStorage.setItem('sprak', lang); } catch (e) {} }
+  }
+  document.querySelectorAll('.sprakval button').forEach(function (b) {
+    b.addEventListener('click', function () { apply(b.getAttribute('data-lang'), true); });
+  });
+  var saved = null; try { saved = localStorage.getItem('sprak'); } catch (e) {}
+  if (saved === 'en') apply('en', false);
+})();
+</script>
+</body>
+</html>
